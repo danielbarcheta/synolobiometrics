@@ -83,7 +83,12 @@ const Solution = () => {
             data-aos="fade-up"
           >
             {cardData.map(({ text, icon: Icon }, idx) => (
-              <div key={idx} className="flex items-start gap-3" data-aos="fade-up" data-aos-delay={idx * 100}>
+              <div
+                key={idx}
+                className="flex items-start gap-3"
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
+              >
                 <Icon className="w-5 h-5 text-[#5ce6b1db] flex-shrink-0 mt-1" />
                 <p className="text-[clamp(0.8rem,2vw,1rem)] leading-relaxed font-medium">
                   {text}
@@ -93,15 +98,34 @@ const Solution = () => {
           </div>
         </div>
 
-        {/* Imagem */}
+        {/* Imagem com sombra radial sutil direcionada */}
         <div
-          className="flex-shrink-0 md:w-1/2 flex items-center justify-center order-first md:order-last"
+          className="relative flex-shrink-0 md:w-1/2 flex items-center justify-center order-first md:order-last"
           data-aos="fade-left"
         >
+          {/* Sombra radial direcional sutil */}
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              background: `
+                radial-gradient(
+                  circle at 40% 60%, 
+                  rgba(255, 255, 255, 0.08) 0%, 
+                  rgba(255, 255, 255, 0.02) 40%, 
+                  transparent 70%
+                )
+              `,
+              transform: "scale(1.3)",
+              pointerEvents: "none",
+              filter: "blur(12px)",
+            }}
+          />
+
+          {/* Imagem */}
           <img
             src={equipment}
             alt="equipment"
-            className="w-full max-w-[600px] h-auto object-contain"
+            className="w-full max-w-[600px] h-auto object-contain relative z-10"
           />
         </div>
       </div>
