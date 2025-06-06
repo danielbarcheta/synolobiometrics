@@ -746,3 +746,16 @@ ul {
 .animate-vertical-scroll {
   animation: vertical-scroll 10s linear infinite;
 }
+
+.carousel-container {
+  min-height: 150px; /* ajuste conforme seu layout */
+  overflow: visible; /* para garantir que não corte o texto */
+  display: flex; /* se usar flex */
+  flex-direction: column;
+}
+
+.carousel-text {
+  font-size: clamp(16px, 2vw, 24px); /* fonte responsiva com limite mínimo */
+  flex-shrink: 0; /* evita encolhimento */
+  white-space: nowrap; /* evita quebra se quiser */
+}

@@ -39,7 +39,7 @@ const Innovation = () => {
   return (
     <section className="w-full px-6 md:px-20 py-24 bg-transparent">
       <div className="flex flex-col md:flex-row items-start md:items-stretch gap-8">
-        <div className="relative w-full md:w-1/2 flex justify-center items-center" data-aos="fade-right">
+        <div className="relative w-full md:w-1/2 flex justify-end pr-10 items-center" data-aos="fade-right">
           <div className="relative w-[290px] md:w-[450px] aspect-[4/3]">
             {images.map((img, idx) => (
               <img
@@ -70,7 +70,14 @@ const Innovation = () => {
           <div className="absolute left-0 top-0 bottom-0 w-px bg-blue-900/30"></div>
         </div>
 
-        <div className="w-full md:w-1/2 flex flex-col gap-10 text-gray-800 pl-0 md:pl-6" data-aos="fade-left">
+        <div
+          className="w-full md:w-1/2 flex flex-col gap-10 text-gray-800 pl-0 md:pl-6"
+          data-aos="fade-left"
+          style={{
+            maxWidth: '60vw',
+            marginRight: '10vw',
+          }}
+        >
           <div className="flex items-center gap-3">
             <img src={icon} alt="Synolo Icon" className="w-8 h-8" />
             <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold text-gray-900 leading-tight">

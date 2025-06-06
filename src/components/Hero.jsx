@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 import babyImage from "../assets/baby.png";
 import { MdOutlineCheckCircle } from "react-icons/md";
 
-// Imagens horizontais
 import scroll1 from "../assets/partner1.png";
 import scroll2 from "../assets/partner2.png";
 import scroll3 from "../assets/partner3.png";
@@ -24,8 +23,10 @@ const Hero = () => {
   const scrollImages = [scroll1, scroll2, scroll3, scroll4, scroll5];
 
   return (
-    <section id="home" className="relative w-full h-[80vh] overflow-hidden pt-16"> {/* Adicionei pt-16 para espaço da navbar */}
-      {/* Background */}
+    <section
+      id="home"
+      className="relative w-full min-h-[600px] max-h-[800px] overflow-hidden pt-16"
+    >
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div
           className="w-full h-full brightness-110 md:brightness-100"
@@ -38,40 +39,55 @@ const Hero = () => {
         />
       </div>
 
-      {/* Conteúdo principal */}
       <div
         className="relative z-10 w-full h-full flex flex-col md:flex-row"
         data-aos="fade-up"
       >
         <div className="flex-1 flex flex-col justify-center md:pl-24 pl-6 min-h-[60vh]">
-          <div className="space-y-3 text-center md:text-left">
-            <h1 className="font-poppins font-bold text-[clamp(48px,8vw,84px)] leading-tight text-gray-900">
+          <div
+            className="space-y-3 text-center md:text-left px-4 md:px-0"
+            style={{ minWidth: "300px" }} // garante mínimo de largura para o texto
+          >
+            <h1
+              className="font-poppins font-bold leading-tight text-gray-900"
+              style={{
+                fontSize: "clamp(1.5rem, 6vw, 5rem)", // menor tamanho fixo em 1.5rem (24px)
+              }}
+            >
               Total <br className="sm:block hidden" />
               <span className="text-gradient">biometrics</span>
             </h1>
-            <h1 className="font-poppins font-bold text-[clamp(44px,7.5vw,76px)] leading-tight text-gray-900">
+            <h1
+              className="font-poppins font-bold leading-tight text-gray-900"
+              style={{
+                fontSize: "clamp(1.2rem, 5.5vw, 4.5rem)", // menor tamanho 1.2rem (19.2px)
+              }}
+            >
               from birth
             </h1>
           </div>
 
-          {/* Certificação substituindo citação */}
-          <div className="mt-10 px-4 md:px-0 text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-3 text-gray-800 font-semibold text-[1.1rem] md:text-[1.3rem]">
-              <MdOutlineCheckCircle className="text-[#5ce6b1db] text-[2rem]" />
-              <span>FBI's PIV Single Finger Capture Device Certification</span>
+          <div
+            className="mt-10 text-center md:text-left px-4 md:px-0"
+            style={{ minWidth: "300px" }} // mesma largura mínima para consistência
+          >
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-gray-800 font-semibold text-[clamp(1rem,1.2vw,1.3rem)]">
+              <MdOutlineCheckCircle className="text-[#5ce6b1db] text-[2rem] flex-shrink-0" />
+              <span className="min-w-0 text-center md:text-left">
+                FBI's PIV Single Finger Capture Device Certification
+              </span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Carrossel de parceiros - ajustado para ficar abaixo da navbar */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-[20] w-[90%] md:w-[60%] h-[30px] bg-transparent flex justify-center items-center gap-8">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-[20] w-full max-w-[800px] px-4 h-auto flex justify-center items-center flex-wrap gap-4">
         {scrollImages.map((img, idx) => (
           <img
             key={idx}
             src={img}
             alt={`partner-${idx}`}
-            className="h-[25px] w-auto object-contain opacity-90 hover:opacity-100 transition"
+            className="h-[24px] sm:h-[28px] w-auto object-contain opacity-90 hover:opacity-100 transition"
           />
         ))}
       </div>
