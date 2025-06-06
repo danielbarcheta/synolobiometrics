@@ -20,9 +20,9 @@ const Footer = () => (
               {footerlink.links.map((link, index) => (
                 <li
                   key={link.name}
-                  className={`font-poppins font-medium text-[15px] leading-[24px] text-white/90 hover:text-white cursor-pointer ${
+                  className={`font-poppins font-medium text-[15px] leading-[24px] text-white/90 hover:text-[#1a365d] transition-colors cursor-pointer ${
                     index !== footerlink.links.length - 1 ? "mb-2" : "mb-0"
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </li>
