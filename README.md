@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong><a href="https://synollo-landingpage.netlify.app/">LIVE DEMO</a></strong>
+  <strong><a href="[https://synollo-landingpage.netlify.app](https://danielbarcheta.github.io/synollobiometrics/)/">LIVE DEMO</a></strong>
 </p>
 
 
