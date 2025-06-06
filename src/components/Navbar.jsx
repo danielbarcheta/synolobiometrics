@@ -11,6 +11,10 @@ const Navbar = () => {
   const lastScrollY = useRef(0);
   const hasHiddenOnce = useRef(false);
 
+  const textShadowSoft = {
+    textShadow: "0 1px 2px rgba(0, 0, 0, 0.80)",
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -46,13 +50,8 @@ const Navbar = () => {
         ${visible ? "opacity-100" : "opacity-0"}
       `}
     >
-      <img
-        src={logo}
-        alt="logo"
-        className="w-[200px] h-[25px] ml-8"
-      />
+      <img src={logo} alt="logo" className="w-[200px] h-[25px] ml-8" />
 
-      {/* Desktop Menu */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 mr-60">
         {navLinks.map((nav, index) => (
           <li
@@ -63,6 +62,7 @@ const Navbar = () => {
           >
             <a
               href={`#${nav.id}`}
+              style={!scrolled ? textShadowSoft : {}}
               className={`${
                 active === nav.title
                   ? "text-[#33cfb0]"
@@ -82,7 +82,6 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* Mobile Menu */}
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
           src={toggle ? close : menu}
