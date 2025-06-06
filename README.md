@@ -8,9 +8,6 @@
   <strong><a href="https://synollo-landingpage.netlify.app/">LIVE DEMO</a></strong>
 </p>
 
-#
-
-![Synollo Landing Page](https://i.ibb.co/BK1Hn0x/Screenshot-2022-08-08-at-4-05-48-PM.png)
 
 ## 🚀 Features
 
