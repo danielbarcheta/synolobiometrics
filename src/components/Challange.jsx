@@ -6,22 +6,22 @@ const failurePoints = [
   {
     title: "Standard 500ppi Fails",
     description:
-      "Infant prints are tiny and require highly sophisticated imaging techniques; hi-res alone is not enough",
+      "Infant prints are tiny and require highly sophisticated imaging techniques; high-resolution alone is not enough.",
   },
   {
-    title: "Contact Readers Fail",
+    title: "Standard Contact Readers Fails",
     description:
-      "Infant prints are easily deformable and distorted by contact pressure, obscuring details",
+      "Infant fingers are easily deformable and fingerprints are distorted by contact pressure, obscuring details.",
   },
   {
-    title: "Non-contact Readers Fail",
+    title: "Standard Non-Contact Readers Fails",
     description:
-      "Infants’ behavior make them difficult to position for consistent image quality",
+      "Infants' behavior make them difficult to position for consistent image quality.",
   },
   {
     title: "Longitudinal Matching Fails",
     description:
-      "As infants grow to be adults, matching becomes difficult or impossible without accommodating age-related changes",
+      "As infants grow to be adults, matching becomes difficult or impossible without accommodating age-related changes.",
   },
 ];
 
@@ -51,13 +51,7 @@ const Challenge = () => {
     <section className="flex flex-col items-center px-6 md:px-20 py-24 bg-transparent max-w-full">
       {/* Título */}
       <h1
-        className="font-poppins font-semibold text-gray-900 text-center"
-        style={{
-          whiteSpace: "nowrap",
-          fontSize: "clamp(1.2rem, 4vw, 2.2rem)",
-          overflow: "visible",
-          textOverflow: "clip",
-        }}
+        className="font-poppins font-semibold text-gray-900 text-center text-balance text-[clamp(1.4rem,5vw,2.2rem)] leading-tight"
       >
         The Challenge: Newborn to 8 year old ID Capture
       </h1>
@@ -73,12 +67,12 @@ const Challenge = () => {
       {/* Tópicos */}
       <div
         data-aos="fade-up"
-        className="mt-12 flex justify-between gap-6 max-w-full flex-wrap md:flex-nowrap"
+        className="mt-12 flex justify-center gap-6 max-w-full flex-wrap"
       >
         {failurePoints.map(({ title, description }, idx) => (
           <div
             key={idx}
-            className="flex-shrink-0 md:w-[22%] w-full mb-6 md:mb-0 text-left"
+            className="flex-shrink-0 md:w-[18%] w-full mb-6 text-left"
           >
             <p className="text-gray-700 text-[15px] leading-snug flex items-start gap-3">
               <ChevronRightIcon />

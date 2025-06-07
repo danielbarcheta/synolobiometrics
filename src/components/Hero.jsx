@@ -29,7 +29,7 @@ const Hero = () => {
     >
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div
-          className="w-full h-full brightness-110 md:brightness-100"
+          className="w-full h-full"
           style={{
             backgroundImage: `url(${babyImage})`,
             backgroundSize: "cover",
@@ -44,14 +44,11 @@ const Hero = () => {
         data-aos="fade-up"
       >
         <div className="flex-1 flex flex-col justify-center md:pl-24 pl-6 min-h-[60vh]">
-          <div
-            className="space-y-3 text-center md:text-left px-4 md:px-0"
-            style={{ minWidth: "300px" }} // garante mínimo de largura para o texto
-          >
+          <div className="space-y-3 text-center md:text-left px-4 md:px-0" style={{ minWidth: "300px" }}>
             <h1
               className="font-poppins font-bold leading-tight text-gray-900"
               style={{
-                fontSize: "clamp(1.5rem, 6vw, 5rem)", // menor tamanho fixo em 1.5rem (24px)
+                fontSize: "clamp(1.5rem, 6vw, 5rem)",
               }}
             >
               Total <br className="sm:block hidden" />
@@ -60,17 +57,14 @@ const Hero = () => {
             <h1
               className="font-poppins font-bold leading-tight text-gray-900"
               style={{
-                fontSize: "clamp(1.2rem, 5.5vw, 4.5rem)", // menor tamanho 1.2rem (19.2px)
+                fontSize: "clamp(1.2rem, 5.5vw, 4.5rem)",
               }}
             >
               from birth
             </h1>
           </div>
 
-          <div
-            className="mt-10 text-center md:text-left px-4 md:px-0"
-            style={{ minWidth: "300px" }} // mesma largura mínima para consistência
-          >
+          <div className="mt-10 text-center md:text-left px-4 md:px-0" style={{ minWidth: "300px" }}>
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-gray-800 font-semibold text-[clamp(1rem,1.2vw,1.3rem)]">
               <MdOutlineCheckCircle className="text-[#5ce6b1db] text-[2rem] flex-shrink-0" />
               <span className="min-w-0 text-center md:text-left">
