@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://danielbarcheta.github.io/synollobiometrics",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -20,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.16.0",
+    "react-router-dom": "^7.6.2",
     "react-slick": "^0.30.3",
     "react-slideshow-image": "^4.3.2",
     "slick-carousel": "^1.8.1"
