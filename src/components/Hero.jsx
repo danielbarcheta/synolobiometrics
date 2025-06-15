@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[600px] max-h-[800px] overflow-hidden pt-16"
+      className="relative w-full min-h-[750px] max-h-[800px] overflow-hidden pt-16"
     >
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div
@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="flex-1 flex flex-col justify-center md:pl-24 pl-6 min-h-[60vh]">
           <div className="space-y-3 text-center md:text-left px-4 md:px-0" style={{ minWidth: "300px" }}>
             <h1
-              className="font-poppins font-bold leading-tight text-gray-900"
+              className=" font-bold leading-tight text-gray-900"
               style={{
                 fontSize: "clamp(1.5rem, 6vw, 5rem)",
               }}
@@ -55,7 +55,7 @@ const Hero = () => {
               <span className="text-gradient">biometrics</span>
             </h1>
             <h1
-              className="font-poppins font-bold leading-tight text-gray-900"
+              className=" font-bold leading-tight text-gray-900"
               style={{
                 fontSize: "clamp(1.2rem, 5.5vw, 4.5rem)",
               }}

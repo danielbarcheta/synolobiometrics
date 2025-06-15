@@ -7,24 +7,29 @@ import {
   instagram,
   linkedin,
   twitter,
+  img2017,
+  img2019,
+  img2022,
+  img2024,
+  img2025,
 } from "../assets";
 
 export const navLinks = [
   {
-    id: "features",
+    id: "about",
     title: "About us",
   },
   {
-    id: "product",
+    id: "technology",
     title: "Technology",
   },
   {
-    id: "technology",
+    id: "events",
     title: "Events",
   },
   {
-    id: "partnering",
-    title: "Partnering",
+    id: "Contact Us",
+    title: "Contact Us",
   },
 ];
 
@@ -176,20 +181,23 @@ export const socialMedia = [
 
 export const timelineData = [
   {
+    id: "grant",
     ano: 2017,
     titulo: "Gates Foundation Grant",
     conteudo:
       "A $3M grant provided to UC San Diego started it all. The Gates Foundation approached Dr. Eliah Aronoff-Spencer to lead a project to determine if - and how - newborns and infants could be identified for vaccine delivery using biometrics.",
-    imagem: "",
+    imagem: img2017,
   },
   {
+    id: "poc-study",
     ano: 2019,
     titulo: "UCSD/Gates POC Study",
     conteudo:
       "The resulting pilot study led by UCSD's team validated that a new, non-contact, high resolution fingerprint device (the 'Panda') combined with novel image processing algorithms, could successfully identify 500 newborns and infants in a hospital setting.",
-    imagem: "",
+    imagem: img2019,
   },
   {
+    id: "synolo-formed",
     ano: 2021,
     titulo: "Synolo® Biometrics Formed",
     conteudo:
@@ -197,38 +205,56 @@ export const timelineData = [
     imagem: "",
   },
   {
+    id: "neo-launched",
     ano: 2022,
     titulo: "Synolo® Neo Launched",
-    conteudo:
-      "> Improved ergonomics and usability\n> Real-time vs. offline image processing\n> Interchangeable aperture thumbwheels\n> Optimized imaging technology with proprietary age-correction algorithms\n> Simplified manufacturing and assembly",
-    imagem: "",
+    conteudo: [
+      "Improved ergonomics and usability",
+      "Real-time vs. offline image processing",
+      "Interchangeable aperture thumbwheels",
+      "Optimized imaging technology with proprietary age-correction algorithms",
+      "Simplified manufacturing and assembly",
+    ],
+    imagem: img2022,
   },
   {
+    id: "citer-study",
     ano: 2022,
     titulo: "CITeR/NSF Study Launched",
-    conteudo:
-      "> POC study at NY hospitals, clinics and schools\n> ~300 infants/youth covering birth to 15 years old\n> Multi-year study conducted by CITeR and Clarkson University",
-    imagem: "",
+    conteudo: [
+      "POC study at NY hospitals, clinics and schools",
+      "~300 infants/youth covering birth to 15 years old",
+      "Multi-year study conducted by CITeR and Clarkson University",
+    ],
+    imagem: img2022,
   },
   {
+    id: "first-poc",
     ano: 2023,
     titulo: "First Commercial POC",
-    conteudo:
-      "> NEC, a major global company with 110,000 employees and operations in 50 countries, announced a POC study using Synolo® Neo\n> Short term study (1-2 months) to be conducted at a major hospital in South America\n> Collect fingerprints ~500 infants at birth and verify on discharge",
+    conteudo: [
+      "NEC, a major global company with 110,000 employees and operations in 50 countries, announced a POC study using Synolo® Neo",
+      "Short term study (1-2 months) to be conducted at a major hospital in South America",
+      "Collect fingerprints ~500 infants at birth and verify on discharge",
+    ],
     imagem: "",
   },
   {
+    id: "launch-brazil",
     ano: 2024,
     titulo: "Synolo® Launches in Brazil",
-    conteudo:
-      "> Synolo® announces expansion into Latin America with the commercial launch of the Synolo® Neo fingerprint reader in Brazil\n> This initiative reinforces the company's commitment to providing innovative biometric and civil identification solutions that ensure the protection of babies and children from the earliest stages of life through key local partners",
-    imagem: "",
+    conteudo: [
+      "Synolo® announces expansion into Latin America with the commercial launch of the Synolo® Neo fingerprint reader in Brazil",
+      "This initiative reinforces the company's commitment to providing innovative biometric and civil identification solutions that ensure the protection of babies and children from the earliest stages of life through key local partners",
+    ],
+    imagem: img2024,
   },
   {
+    id: "fbi-certification",
     ano: 2025,
     titulo: "FBI Certification",
     conteudo:
       "Synolo® Neo becomes the first non-contact device designed for infant and child as well as adult biometrics to receive FBI PIV single finger certification.",
-    imagem: "",
+    imagem: img2025,
   },
 ];

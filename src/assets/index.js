@@ -13,9 +13,19 @@ import people04 from "./people04.jpeg";
 import equipment from "./equipment.png";
 import brandart from "./brandart.png";
 import fbitip from "./fbitip.png";
-import logowhite from "./logowhite.png"
+import logowhite from "./logowhite.png";
+import img2017 from "./2017.webp";
+import img2019 from "./2019.jpg";
+import img2022 from "./2022.svg";
+import img2024 from "./2024.png";
+import img2025 from "./2025.jpeg";
 
 export {
+  img2024,
+  img2025,
+  img2019,
+  img2022,
+  img2017,
   logo,
   logowhite,
   menu,

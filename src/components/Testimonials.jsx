@@ -1,20 +1,48 @@
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { feedback } from "../constants";
 import FeedbackCard from "./FeedbackCard";
 
 const Testimonials = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+    AOS.refresh();
+  }, []);
+
+  // IDs dos cards que já foram "hovered" e devem ficar fixos abertos
+  const [expandedIds, setExpandedIds] = useState([]);
+
+  // Quando o mouse entra no card, adiciona o id no array se ainda não tiver
+  const handleHover = (id) => {
+    if (!expandedIds.includes(id)) {
+      setExpandedIds((prev) => [...prev, id]);
+    }
+  };
+
   return (
-    <section id="clients" className="relative w-full min-h-screen px-6 py-24 overflow-hidden">
-      {/* Título alinhado à direita */}
-      <div className="w-full flex justify-end mb-12">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white text-right">
+    <section
+      id="clients"
+      className="w-full px-6 pt-20 pb-24 bg-white overflow-hidden"
+    >
+      <div className="w-full flex justify-center mb-16" data-aos="fade-up">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-700">
           Synolo<sup>®</sup> Team
         </h2>
       </div>
 
-      {/* Grid 2x2 com espaçamento */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
-        {feedback.slice(0, 4).map((card) => (
-          <FeedbackCard key={card.id} {...card} />
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto"
+        data-aos="fade-up"
+      >
+        {feedback.slice(0, 4).map((card, idx) => (
+          <div key={card.id} data-aos="fade-up" data-aos-delay={idx * 100}>
+            <FeedbackCard
+              {...card}
+              expanded={expandedIds.includes(card.id)}
+              onHover={() => handleHover(card.id)}
+            />
+          </div>
         ))}
       </div>
     </section>

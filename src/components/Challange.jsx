@@ -59,7 +59,6 @@ const Challenge = () => {
       {/* Subtítulo */}
       <p
         className="mt-3 italic text-center text-gray-500 font-medium text-[clamp(0.9rem,1.4vw,1.1rem)] max-w-xl"
-        data-aos="fade-up"
       >
         Why infant print identification is so difficult?
       </p>

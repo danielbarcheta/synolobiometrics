@@ -1,0 +1,114 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { timelineData } from "../constants";
+
+const ArrowRightIcon = () => (
+  <svg
+    className="w-3.5 h-3.5 mr-2 flex-shrink-0 text-[#5ce6b1db]"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+  </svg>
+);
+
+const Timeline = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
+  const renderContent = (content) => {
+    if (Array.isArray(content)) {
+      return (
+        <ul className="list-none p-0 m-0 space-y-1">
+          {content.map((item, i) => (
+            <li
+              key={i}
+              className="flex items-start text-gray-600 leading-snug text-sm"
+            >
+              <ArrowRightIcon />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    return (
+      <p className="text-gray-600 whitespace-pre-line leading-snug text-sm">
+        {content}
+      </p>
+    );
+  };
+
+  const rightSideIds = ["citer-study"];
+
+  return (
+    <section className="relative w-full bg-white py-16 px-4 md:px-12">
+      <div className="relative max-w-5xl mx-auto">
+        {/* Linha pontilhada */}
+        <div className="absolute left-1/2 top-0 h-full w-0.5 border-l border-dashed border-gray-300 transform -translate-x-1/2 z-0" />
+
+        <div className="flex flex-col gap-14">
+          {timelineData
+            .slice()
+            .reverse()
+            .map((item, idx) => {
+              const forceRight = rightSideIds.includes(item.id);
+              const isLeft = forceRight ? false : idx % 2 === 0;
+
+              return (
+                <div
+                  key={item.id}
+                  className={`relative w-full flex flex-col md:flex-row items-center ${
+                    isLeft ? "md:flex-row-reverse" : ""
+                  }`}
+                  data-aos={isLeft ? "fade-right" : "fade-left"}
+                >
+                  {/* Ponto central */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-2.5 h-2.5 bg-[#5ce6b1db] rounded-full z-10 shadow-sm" />
+
+                  {/* Bloco de texto */}
+                  <div
+                    className={`w-full md:w-1/2 px-4 md:px-6 ${
+                      isLeft ? "text-left" : "text-right"
+                    }`}
+                  >
+                    <p className="text-[#5ce6b1db] font-medium text-sm mb-1">
+                      {item.ano}
+                    </p>
+                    <h3 className="text-gray-700 text-base font-semibold mb-1">
+                      {item.titulo}
+                    </h3>
+                    {renderContent(item.conteudo)}
+                  </div>
+
+                  {/* Imagem */}
+                  {item.imagem && (
+                    <div
+                      className={`w-full md:w-1/2 mt-3 md:mt-0 flex justify-center ${
+                        isLeft ? "md:mr-1" : "md:ml-1"
+                      }`}
+                      style={{ maxWidth: "100px" }}
+                    >
+                      <img
+                        src={item.imagem}
+                        alt={item.titulo}
+                        className="w-20 h-20 rounded-full object-cover shadow-sm border border-gray-100"
+                      />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Timeline;
