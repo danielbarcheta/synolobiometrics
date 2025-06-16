@@ -10,7 +10,10 @@ import {
   GlobeAltIcon,
   CodeBracketIcon,
   CameraIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/outline";
+
+import { Link } from "react-router-dom";
 
 const cardData = [
   {
@@ -124,28 +127,29 @@ const Solution = () => {
             className="w-full max-w-[600px] h-auto object-contain relative z-10"
           />
 
-          <button
+          <Link
+            to="/technology"
             className="
               absolute
               bottom-4
               right-4
               md:bottom-6
               md:right-6
-              bg-[#5ce6b1db]
               text-white
-              text-sm
+              text-lg
               font-semibold
-              px-4
-              py-2
-              rounded-full
-              transition-colors
-              hover:bg-white
-              hover:text-[#1e3a8a]
+              flex
+              items-center
+              gap-1.5
+              bg-transparent
+              hover:text-[#5ce6b1db]
               focus:outline-none
+              transition-colors
             "
           >
-            View more
-          </button>
+            View More
+            <ArrowRightIcon className="w-5 h-5 stroke-[1.5]" />
+          </Link>
         </div>
       </div>
     </section>

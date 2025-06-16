@@ -12,7 +12,9 @@ import {
   img2022,
   img2024,
   img2025,
+  equipment,
 } from "../assets";
+import synologo from '../assets/icon-synolo.png';
 
 export const navLinks = [
   {
@@ -202,7 +204,7 @@ export const timelineData = [
     titulo: "Synolo® Biometrics Formed",
     conteudo:
       "Synolo® Biometrics was formed by key members of the UCSD team and seasoned entrepreneurs to commercialize the technology. Funding was provided by BioPacific Investors angel group.",
-    imagem: "",
+    imagem: synologo,
   },
   {
     id: "neo-launched",
@@ -215,7 +217,7 @@ export const timelineData = [
       "Optimized imaging technology with proprietary age-correction algorithms",
       "Simplified manufacturing and assembly",
     ],
-    imagem: img2022,
+    imagem: equipment,
   },
   {
     id: "citer-study",

@@ -33,7 +33,10 @@ const FeedbackCard = ({ content, name, title, img, expanded, onHover }) => {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="mt-4 bg-white text-gray-700 text-sm leading-relaxed px-4 pb-4 pt-3 rounded-b-xl shadow-sm max-w-sm border-t-0"
+          className="mt-4 bg-white text-gray-700 text-sm leading-relaxed px-4 pb-4 pt-3 rounded-b-xl max-w-sm border-t-0"
+          style={{
+            boxShadow: "none",
+          }}
         >
           {content}
         </motion.div>
