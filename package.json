@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://danielbarcheta.github.io/synollobiometrics",
+  "homepage": "https://danielbarcheta.github.io/synolobiometrics",
 
   "scripts": {
     "dev": "vite",
