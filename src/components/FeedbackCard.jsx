@@ -1,24 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const TypingEffect = ({ text, speed = 30 }) => {
-  const [displayedText, setDisplayedText] = useState("");
-
-  useEffect(() => {
-    let index = 0;
-    setDisplayedText("");
-    const interval = setInterval(() => {
-      setDisplayedText((prev) => prev + text.charAt(index));
-      index++;
-      if (index >= text.length) clearInterval(interval);
-    }, speed);
-
-    return () => clearInterval(interval);
-  }, [text, speed]);
-
-  return <>{displayedText}</>;
-};
-
 const FeedbackCard = ({ content, name, title, img, expanded, onHover }) => {
   return (
     <motion.div
@@ -72,7 +54,7 @@ const FeedbackCard = ({ content, name, title, img, expanded, onHover }) => {
           className="mt-4 bg-white text-gray-700 text-sm leading-relaxed px-4 pb-4 pt-3 rounded-b-xl max-w-sm border-t-0"
           style={{ boxShadow: "none" }}
         >
-          <TypingEffect text={content} speed={20} />
+          {content}
         </motion.div>
       )}
     </motion.div>
