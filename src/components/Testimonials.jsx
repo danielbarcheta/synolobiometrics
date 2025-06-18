@@ -23,7 +23,7 @@ const Testimonials = () => {
       id="clients"
       className="w-full px-6 pt-20 pb-24 bg-white overflow-hidden"
     >
-      <div className="w-full flex justify-center mb-16" data-aos="fade-up">
+      <div className="w-full flex justify-center mt-1 mb-16" data-aos="fade-up">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-700">
           Synolo<sup>®</sup> Team
         </h2>
