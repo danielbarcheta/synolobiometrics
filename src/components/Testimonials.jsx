@@ -10,10 +10,8 @@ const Testimonials = () => {
     AOS.refresh();
   }, []);
 
-  // IDs dos cards que já foram "hovered" e devem ficar fixos abertos
   const [expandedIds, setExpandedIds] = useState([]);
 
-  // Quando o mouse entra no card, adiciona o id no array se ainda não tiver
   const handleHover = (id) => {
     if (!expandedIds.includes(id)) {
       setExpandedIds((prev) => [...prev, id]);
@@ -23,10 +21,10 @@ const Testimonials = () => {
   return (
     <section
       id="clients"
-      className="w-full px-6 pt-20 pb-24 bg-white overflow-hidden"
+      className="w-full px-6 pt-10 pb-24 bg-white overflow-hidden"
     >
       <div className="w-full flex justify-center mb-16" data-aos="fade-up">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-700">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-700">
           Synolo<sup>®</sup> Team
         </h2>
       </div>

@@ -19,6 +19,7 @@ import img2019 from "./2019.jpg";
 import img2022 from "./2022.svg";
 import img2024 from "./2024.png";
 import img2025 from "./2025.jpeg";
+import iconsynolo from "./icon-synolo.png";
 
 export {
   img2024,
@@ -27,6 +28,7 @@ export {
   img2022,
   img2017,
   logo,
+  iconsynolo,
   logowhite,
   menu,
   close,

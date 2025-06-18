@@ -4,7 +4,7 @@ import { Footer, Testimonials } from "../components";
 import Timeline from "../components/Timeline";
 import PartneringServices from "../components/PartneringServices";
 import MissionAndValues from "../components/MissionAndValues";
-import TechnologyHighlight from "../components/TechnologyHighlight";
+import PartnersShowcase from "../components/PartnersShowcase";
 
 const About = () => {
   return (
@@ -12,7 +12,7 @@ const About = () => {
    <AboutHero/>
    <MissionAndValues/>
     <Timeline/>
-    <TechnologyHighlight/>
+    <PartnersShowcase/>
    <Testimonials/>
    <Footer/>
    </>
