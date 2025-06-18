@@ -23,27 +23,25 @@ const Testimonials = () => {
       id="clients"
       className="w-full px-6 pt-20 pb-24 bg-white overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-20" data-aos="fade-up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-700 text-left">
-            Synolo<sup>®</sup> Team
-          </h2>
-        </div>
+      <div className="w-full flex justify-center mb-16" data-aos="fade-up">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-700">
+          Synolo<sup>®</sup> Team
+        </h2>
+      </div>
 
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10"
-          data-aos="fade-up"
-        >
-          {feedback.slice(0, 4).map((card, idx) => (
-            <div key={card.id} data-aos="fade-up" data-aos-delay={idx * 100}>
-              <FeedbackCard
-                {...card}
-                expanded={expandedIds.includes(card.id)}
-                onHover={() => handleHover(card.id)}
-              />
-            </div>
-          ))}
-        </div>
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto"
+        data-aos="fade-up"
+      >
+        {feedback.slice(0, 4).map((card, idx) => (
+          <div key={card.id} data-aos="fade-up" data-aos-delay={idx * 100}>
+            <FeedbackCard
+              {...card}
+              expanded={expandedIds.includes(card.id)}
+              onHover={() => handleHover(card.id)}
+            />
+          </div>
+        ))}
       </div>
     </section>
   );
