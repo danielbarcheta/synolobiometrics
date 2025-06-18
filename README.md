@@ -1,11 +1,11 @@
-<h1 align="center">🔬 Synollo - Modern Landing Page for Synollo Biometrics</h1>
+<h1 align="center">🔬 Synolo - Modern Landing Page for Synolo Biometrics</h1>
 
 <p align="center">
   A responsive and modern landing page built using React.js, Tailwind CSS, and Vite for Synollo Biometrics.
 </p>
 
 <p align="center">
-  <strong><a href="[https://synollo-landingpage.netlify.app](https://danielbarcheta.github.io/synollobiometrics/)/">LIVE DEMO</a></strong>
+  <strong><a href="[https://synolo-landingpage.netlify.app](https://danielbarcheta.github.io/synolobiometrics/)/">LIVE DEMO</a></strong>
 </p>
 
 
@@ -17,9 +17,9 @@
 - Styled using **Tailwind CSS** for rapid UI development
 - Powered by **Vite** for lightning-fast development and build times
 
-## 🏢 About Synollo Biometrics
+## 🏢 About Synolo Biometrics
 
-Synollo Biometrics is a pioneering company in biometric solutions focused on infant and child identification through advanced, non-contact fingerprint technology.
+Synolo Biometrics is a pioneering company in biometric solutions focused on infant and child identification through advanced, non-contact fingerprint technology.
 
 ## 🛠️ Technologies Used
 
@@ -33,7 +33,7 @@ Synollo Biometrics is a pioneering company in biometric solutions focused on inf
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/danielbarceta/synollo.git
-cd synollo
+git clone https://github.com/danielbarceta/synolo.git
+cd synolo
 npm install
 npm run dev
