@@ -10,10 +10,10 @@ const About = () => {
   return (
     <>
    <AboutHero/>
-   <MissionAndValues/>
     <Timeline/>
-    <PartnersShowcase/>
+                 <PartnersShowcase/>
    <Testimonials/>
+      <MissionAndValues/>
    <Footer/>
    </>
   );

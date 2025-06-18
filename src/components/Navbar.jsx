@@ -89,7 +89,7 @@ const Navbar = () => {
 
       <nav
         className={`w-full flex px-4 justify-between items-center fixed top-0 left-0 right-0 z-[99] transition-all duration-500 ease-in-out
-          ${scrolled ? "bg-white/75 shadow-sm py-2" : "bg-transparent py-4"}
+          ${scrolled ? "bg-white/95 shadow-sm py-2" : "bg-transparent py-4"}
           ${visible ? "opacity-100" : "opacity-0"}
         `}
       >
