@@ -7,9 +7,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import natureLogo from "../assets/nature-logo.png"; // seu logo
+import natureLogo from "../assets/nature-logo.png";
 
-// Dados percentuais para gráficos de pizza
 const pieData = [
   {
     id: "TAR Newborns",
@@ -25,11 +24,10 @@ const pieData = [
       { name: "TAR 4+ days", value: 98 },
       { name: "Other", value: 2 },
     ],
-    label: "TAR 4+ days (%)",
+    label: "TAR 4+ Days (%)",
   },
 ];
 
-// Cor principal
 const COLORS = ["#5ce6b1db", "#d3f0e9"];
 
 const NatureHighlight = () => {
@@ -48,14 +46,11 @@ const NatureHighlight = () => {
           className="h-12 md:h-16 mx-auto mb-4"
         />
         <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-gray-800">
-          Destaque na{" "}
+          Featured in{" "}
           <span style={{ color: "#5ce6b1db" }}>Nature Scientific Reports</span>
         </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
-          Nossa tecnologia Synolo® Neo foi destaque em uma publicação na revista
-          científica <strong>Nature</strong>, reforçando sua eficácia na
-          identificação biométrica de recém-nascidos durante vacinação e cuidados
-          hospitalares.
+        <p className="text-base text-gray-600 max-w-3xl mx-auto mb-6">
+          Our Synolo® Neo technology was highlighted in a publication by the scientific journal <strong>Nature</strong>, reinforcing its effectiveness in biometric identification of newborns during vaccination and hospital care.
         </p>
         <a
           href="https://www.nature.com/articles/s41598-022-25986-6"
@@ -63,7 +58,7 @@ const NatureHighlight = () => {
           rel="noopener noreferrer"
           className="inline-block bg-[#5ce6b1db] text-white px-6 py-3 rounded-md font-medium hover:brightness-90 transition duration-300"
         >
-          Ver publicação
+          View Publication
         </a>
       </motion.div>
 
@@ -74,21 +69,19 @@ const NatureHighlight = () => {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 items-center"
       >
-        {/* Exibindo números simples para Total Subjects e Newborns Enrolled */}
-<div className="text-center">
-  <h3 className="mb-3 font-semibold text-gray-800">Total Subjects</h3>
-  <p className="text-7xl font-bold" style={{ color: "#5ce6b1db" }}>
-    494
-  </p>
-</div>
-<div className="text-center">
-  <h3 className="mb-3 font-semibold text-gray-800">Newborns Enrolled</h3>
-  <p className="text-7xl font-bold" style={{ color: "#5ce6b1db" }}>
-    297
-  </p>
-</div>
+        <div className="text-center">
+          <h3 className="mb-3 font-semibold text-gray-800">Total Subjects</h3>
+          <p className="text-7xl font-bold" style={{ color: "#5ce6b1db" }}>
+            494
+          </p>
+        </div>
+        <div className="text-center">
+          <h3 className="mb-3 font-semibold text-gray-800">Newborns Enrolled</h3>
+          <p className="text-7xl font-bold" style={{ color: "#5ce6b1db" }}>
+            297
+          </p>
+        </div>
 
-        {/* Gráficos de pizza para os percentuais */}
         {pieData.map(({ id, data, label }) => (
           <div key={id} className="text-center">
             <h3 className="mb-3 font-semibold text-gray-800">{label}</h3>
