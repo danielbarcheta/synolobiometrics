@@ -558,7 +558,7 @@ ul {
   transition: color 0.2s ease-in-out;
 }
 
-/* Garante que o logo não tenha fundo branco */
+/* Garante que o logo não tenha fundo brancoo */
 .navbar img {
   mix-blend-mode: difference;
 }
