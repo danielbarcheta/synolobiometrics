@@ -127,7 +127,7 @@
   filter: blur(750px);
 }
 
-/* Navbar fixa no topo */
+/* Navbar fixa no topo.  */
 .navbar {
   position: fixed;
   top: 0;
