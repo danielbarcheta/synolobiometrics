@@ -49,31 +49,29 @@ const Challenge = () => {
 
   return (
     <section className="flex flex-col items-center px-6 md:px-20 py-24 bg-transparent max-w-full">
-      {/* Título */}
       <h1
         className="font-poppins font-semibold text-gray-900 text-center text-balance text-[clamp(1.4rem,5vw,2.2rem)] leading-tight"
       >
         The Challenge: Newborn to 8 year old ID Capture
       </h1>
 
-      {/* Subtítulo */}
       <p
         className="mt-3 italic text-center text-gray-500 font-medium text-[clamp(0.9rem,1.4vw,1.1rem)] max-w-xl"
       >
         Why infant print identification is so difficult?
       </p>
 
-      {/* Tópicos */}
       <div
         data-aos="fade-up"
-        className="mt-12 flex justify-center gap-6 max-w-full flex-wrap"
+        className="mt-12 flex flex-wrap justify-center gap-12 max-w-[90vw]"
+        style={{ marginLeft: "auto", marginRight: "auto" }}
       >
         {failurePoints.map(({ title, description }, idx) => (
           <div
             key={idx}
-            className="flex-shrink-0 md:w-[18%] w-full mb-6 text-left"
+            className="flex-shrink-0 flex-grow md:flex-grow-0 md:w-[22%] w-full min-w-[260px] mb-6 text-left"
           >
-            <p className="text-gray-700 text-[15px] leading-snug flex items-start gap-3">
+            <p className="text-gray-700 text-[17px] leading-relaxed flex items-start gap-4">
               <ChevronRightIcon />
               <span>
                 <span className="font-semibold">{title}:</span> {description}

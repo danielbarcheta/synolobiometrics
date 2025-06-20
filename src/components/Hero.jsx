@@ -44,20 +44,25 @@ const Hero = () => {
         data-aos="fade-up"
       >
         <div className="flex-1 flex flex-col justify-center md:pl-24 pl-6 min-h-[60vh]">
-          <div className="space-y-3 text-center md:text-left px-4 md:px-0" style={{ minWidth: "300px" }}>
+          <div className="space-y-1 text-center md:text-left px-4 md:px-0" style={{ minWidth: "300px" }}>
             <h1
-              className=" font-bold leading-tight text-gray-900"
+              className="leading-[1.1] text-gray-900"
               style={{
                 fontSize: "clamp(1.5rem, 6vw, 5rem)",
+                fontFamily: "'Kanit', sans-serif",
+                fontWeight: 800,
+                marginBottom: 0,
               }}
             >
               Total <br className="sm:block hidden" />
               <span className="text-gradient">biometrics</span>
             </h1>
             <h1
-              className=" font-bold leading-tight text-gray-900"
+              className="leading-[1.1] text-gray-900"
               style={{
                 fontSize: "clamp(1.2rem, 5.5vw, 4.5rem)",
+                fontFamily: "'Kanit', sans-serif",
+                fontWeight: 800,
               }}
             >
               from birth

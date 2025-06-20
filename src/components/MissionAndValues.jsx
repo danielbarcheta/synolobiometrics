@@ -5,9 +5,8 @@ const brandColor = "#33cfabd5";
 
 export default function MissionAndValues() {
   return (
-    <section className="w-full px-6 py-16 bg-gradient-to-b from-gray-50 to-white text-gray-800">
+    <section className="w-full px-6 py-16 text-gray-300 bg-gradient-to-b from-[#0a1a2a] to-[#102b45]">
       <div className="max-w-6xl mx-auto text-center">
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center">
             <FaFingerprint className="text-5xl mx-auto mb-3" style={{ color: brandColor }} />

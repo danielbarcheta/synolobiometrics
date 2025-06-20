@@ -3,6 +3,7 @@ import {
   people02,
   people03,
   people04,
+  people05,
   facebook,
   instagram,
   linkedin,
@@ -95,6 +96,13 @@ export const feedback = [
     title: "Co-founder & Neo Inventor",
     img: people04,
   },
+  {
+    id: "feedback-5",
+    content:  "Rafael Cury Lucchesi",
+    name: "Rafael Cury Lucchesi",
+    title: "Business Development Manager",
+    img: people05,
+  }
 ];
 
 export const stats = [

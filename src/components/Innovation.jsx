@@ -37,7 +37,7 @@ const Innovation = () => {
   ];
 
   return (
-    <section className="w-full px-6 md:px-20 py-24 bg-transparent">
+    <section className="w-full px-6 md:px-20 py-24 bg-white">
       <div className="flex flex-col md:flex-row items-center md:items-stretch gap-8">
         <div className="relative w-full md:w-1/2 flex justify-center md:justify-end pr-0 md:pr-10 items-center" data-aos="fade-right">
           <div className="relative w-[290px] md:w-[450px] aspect-[4/3]">

@@ -10,6 +10,7 @@ import people01 from "./people01.jpeg";
 import people02 from "./people02.jpeg";
 import people03 from "./people03.jpeg";
 import people04 from "./people04.jpeg";
+import people05 from "./people05.jpeg"
 import equipment from "./equipment.png";
 import brandart from "./brandart.png";
 import fbitip from "./fbitip.png";
@@ -41,6 +42,7 @@ export {
   people02,
   people03,
   people04,
+  people05,
   equipment,
   brandart,
   fbitip,

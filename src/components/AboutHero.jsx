@@ -11,7 +11,7 @@ export default function AboutHero() {
 
   return (
     <section
-      className="relative w-full bg-cover bg-center flex items-center justify-center pt-32 overflow-hidden"
+      className="relative w-full bg-cover bg-center flex items-center justify-center pt-48 overflow-hidden"
       style={{
         backgroundImage: `url(${babyabout})`,
         minHeight: "500px",
@@ -20,14 +20,21 @@ export default function AboutHero() {
       <div className="bg-black bg-opacity-50 w-full h-full absolute top-0 left-0 z-0" />
 
       <div
-        className="relative z-10 w-full px-8 md:px-16 py-12 max-w-7xl mx-auto"
+        className="relative z-10 w-full px-8 md:px-16 max-w-7xl mx-auto"
         data-aos="fade-up"
+        style={{ paddingTop: "8rem", paddingBottom: "3rem", fontFamily: "'Kanit', sans-serif", fontWeight: 100 }}
       >
-        <h1 className="text-white text-3xl md:text-4xl font-semibold mb-12 max-w-3xl">
+        <h1
+          className="text-white text-3xl md:text-4xl max-w-3xl"
+          style={{ fontWeight: 600, marginBottom: "1rem" }}
+        >
           About Us
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white text-sm font-medium leading-relaxed">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white text-sm font-medium leading-relaxed"
+          style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 100 }}
+        >
           <p>
             Synolo<sup>®</sup> Biometrics was created to commercialize the infant biometrics
             collection technology developed at UC San Diego with funding from the Gates Foundation. This
