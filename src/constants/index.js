@@ -31,7 +31,7 @@ export const navLinks = [
     title: "Events",
   },
   {
-    id: "Contact Us",
+    id: "contact",
     title: "Contact Us",
   },
 ];

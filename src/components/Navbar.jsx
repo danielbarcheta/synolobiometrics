@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { close, logo, menu, iconsynolo } from "../assets";
 import { navLinks } from "../constants";
 
-const Navbar = () => {
+const Navbar = ({ isContact = false }) => {
   const location = useLocation();
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
@@ -18,6 +18,13 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    if (isContact) {
+      // Força scrolled para true e visível sempre
+      setScrolled(true);
+      setVisible(true);
+      return; // não adiciona event listener para scroll
+    }
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
@@ -42,10 +49,14 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isContact]);
 
   useEffect(() => {
-    const path = location.pathname === "/" ? "Home" : navLinks.find(link => `/${link.id}` === location.pathname)?.title || "";
+    const path =
+      location.pathname === "/"
+        ? "Home"
+        : navLinks.find((link) => `/${link.id}` === location.pathname)?.title ||
+          "";
     setActive(path);
   }, [location]);
 
@@ -76,24 +87,34 @@ const Navbar = () => {
         }
       `}</style>
 
-      <Link to="/" className="fixed top-4 left-8 z-[100]">
-        <img
-          src={logo}
-          alt="logo-big"
-          className={`transition-all duration-500 ease-in-out pointer-events-auto
+      {/* Logo grande só aparece se !isContact */}
+      {!isContact && (
+        <Link to="/" className="fixed top-4 left-8 z-[100]">
+          <img
+            src={logo}
+            alt="logo-big"
+            className={`transition-all duration-500 ease-in-out pointer-events-auto
             ${scrolled ? "opacity-0 translate-y-[-20px]" : "opacity-100 translate-y-0"}
           `}
-          style={{ width: "300px", height: "auto" }}
-        />
-      </Link>
+            style={{ width: "300px", height: "auto" }}
+          />
+        </Link>
+      )}
 
       <nav
         className={`w-full flex px-4 justify-between items-center fixed top-0 left-0 right-0 z-[99] transition-all duration-500 ease-in-out
-          ${scrolled ? "bg-white/95 shadow-sm py-2" : "bg-transparent py-4"}
+          ${
+            scrolled
+              ? isContact
+                ? "bg-white/95 shadow-none py-2"
+                : "bg-white/95 shadow-sm py-2"
+              : "bg-transparent py-4"
+          }
           ${visible ? "opacity-100" : "opacity-0"}
         `}
       >
-        {scrolled && (
+        {/* Logo pequeno aparece só se scrolled e !isContact */}
+        {scrolled && !isContact && (
           <Link to="/">
             <img src={iconsynolo} alt="logo" className="w-[30px] h-[30px] ml-8" />
           </Link>
@@ -109,10 +130,12 @@ const Navbar = () => {
             >
               <Link
                 to={`/${nav.id}`}
-                style={!scrolled ? textShadowSoft : {}}
+                style={isContact ? {} : !scrolled ? textShadowSoft : {}}
                 className={`fade-underline ${
                   active === nav.title
                     ? "text-[#33cfb0]"
+                    : isContact
+                    ? "text-[#001F3F]" // azul marinho fixo
                     : scrolled
                     ? "text-gray-900"
                     : "text-white"
