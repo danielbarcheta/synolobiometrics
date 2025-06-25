@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -12,6 +12,8 @@ import scroll4 from "../assets/partner4.svg";
 import scroll5 from "../assets/partner5.png";
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1600,
@@ -28,14 +30,13 @@ const Hero = () => {
       className="relative w-full min-h-[750px] max-h-[800px] overflow-hidden pt-16"
     >
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `url(${babyImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
+        <img
+          src={babyImage}
+          alt="Background"
+          onLoad={() => setImageLoaded(true)}
+          className={`w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          }`}
         />
       </div>
 

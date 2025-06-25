@@ -1,5 +1,6 @@
 import { MdArrowForward } from "react-icons/md";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import scroll1 from "../assets/partner1.png";
 import scroll2 from "../assets/partner2.png";
@@ -52,13 +53,13 @@ export default function PartnersShowcase() {
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 px-4 py-2 rounded-full transition-colors hover:text-[#33cfab]"
             style={{ border: "none", backgroundColor: "transparent" }}
           >
             Become a partner <MdArrowForward className="text-base" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
