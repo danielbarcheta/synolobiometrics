@@ -59,7 +59,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="h-screen flex bg-white">
+    <div className="h-screen flex bg-white pt-16 md:pt-0">
       <ToastContainer />
       <div className="w-full md:w-[40%] px-20 py-28 flex flex-col justify-center bg-white">
         <h1 className="text-3xl font-bold text-slate-800 mb-2">Chat to our team</h1>
