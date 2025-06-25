@@ -44,11 +44,13 @@ const Hero = () => {
         data-aos="fade-up"
       >
         <div className="flex-1 flex flex-col justify-center md:pl-24 pl-6 min-h-[60vh]">
-          <div className="space-y-1 text-center md:text-left px-4 md:px-0" style={{ minWidth: "300px" }}>
+          <div
+            className="space-y-1 text-center md:text-left px-4 md:px-0 mt-16 md:mt-0"
+            style={{ minWidth: "300px" }}
+          >
             <h1
-              className="leading-[1.1] text-gray-900"
+              className="leading-[1.1] text-gray-900 uppercase text-[3.5rem] sm:text-[clamp(1.5rem,6vw,5rem)] sm:normal-case"
               style={{
-                fontSize: "clamp(1.5rem, 6vw, 5rem)",
                 fontFamily: "'Kanit', sans-serif",
                 fontWeight: 800,
                 marginBottom: 0,
@@ -58,9 +60,8 @@ const Hero = () => {
               <span className="text-gradient">biometrics</span>
             </h1>
             <h1
-              className="leading-[1.1] text-gray-900"
+              className="leading-[1.1] text-gray-900 uppercase text-[2.5rem] sm:text-[clamp(1.2rem,5.5vw,4.5rem)] sm:normal-case"
               style={{
-                fontSize: "clamp(1.2rem, 5.5vw, 4.5rem)",
                 fontFamily: "'Kanit', sans-serif",
                 fontWeight: 800,
               }}
@@ -69,7 +70,10 @@ const Hero = () => {
             </h1>
           </div>
 
-          <div className="mt-10 text-center md:text-left px-4 md:px-0" style={{ minWidth: "300px" }}>
+          <div
+            className="mt-[18rem] md:mt-10 text-center md:text-left px-4 md:px-0"
+            style={{ minWidth: "300px" }}
+          >
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-gray-800 font-semibold text-[clamp(1rem,1.2vw,1.3rem)]">
               <MdOutlineCheckCircle className="text-[#5ce6b1db] text-[2rem] flex-shrink-0" />
               <span className="min-w-0 text-center md:text-left">

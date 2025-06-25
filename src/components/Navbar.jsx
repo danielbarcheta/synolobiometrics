@@ -1,7 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { close, logo, menu, iconsynolo } from "../assets";
+import { HiMenu, HiX } from "react-icons/hi";
+import { logo, iconsynolo } from "../assets";
 import { navLinks } from "../constants";
+
+const brazilFlag = "https://flagcdn.com/w20/br.png";
+const usaFlag = "https://flagcdn.com/w20/us.png";
+const spainFlag = "https://flagcdn.com/w20/es.png";
 
 const Navbar = ({ isContact = false }) => {
   const location = useLocation();
@@ -19,10 +24,9 @@ const Navbar = ({ isContact = false }) => {
 
   useEffect(() => {
     if (isContact) {
-      // Força scrolled para true e visível sempre
       setScrolled(true);
       setVisible(true);
-      return; // não adiciona event listener para scroll
+      return;
     }
 
     const handleScroll = () => {
@@ -66,7 +70,6 @@ const Navbar = ({ isContact = false }) => {
         .fade-underline {
           position: relative;
         }
-
         .fade-underline::after {
           content: '';
           position: absolute;
@@ -80,22 +83,20 @@ const Navbar = ({ isContact = false }) => {
           transition: opacity 0.3s ease, transform 0.3s ease;
           transform-origin: left;
         }
-
         .fade-underline:hover::after {
           opacity: 1;
           transform: scaleX(1);
         }
       `}</style>
 
-      {/* Logo grande só aparece se !isContact */}
       {!isContact && (
         <Link to="/" className="fixed top-4 left-8 z-[100]">
           <img
             src={logo}
             alt="logo-big"
             className={`transition-all duration-500 ease-in-out pointer-events-auto
-            ${scrolled ? "opacity-0 translate-y-[-20px]" : "opacity-100 translate-y-0"}
-          `}
+              ${scrolled ? "opacity-0 translate-y-[-20px]" : "opacity-100 translate-y-0"}
+            `}
             style={{ width: "300px", height: "auto" }}
           />
         </Link>
@@ -112,82 +113,99 @@ const Navbar = ({ isContact = false }) => {
           }
           ${visible ? "opacity-100" : "opacity-0"}
         `}
+        style={{
+          transform: !scrolled ? "translateY(20px)" : "translateY(0)",
+        }}
       >
-        {/* Logo pequeno aparece só se scrolled e !isContact */}
         {scrolled && !isContact && (
           <Link to="/">
             <img src={iconsynolo} alt="logo" className="w-[30px] h-[30px] ml-8" />
           </Link>
         )}
 
-        <ul className="list-none sm:flex hidden justify-end items-center flex-1 mr-60">
-          {navLinks.map((nav, index) => (
-            <li
-              key={nav.id}
-              className={`font-poppins font-light cursor-pointer text-[18px] ${
-                index === navLinks.length - 1 ? "mr-0" : "mr-8"
-              }`}
-            >
-              <Link
-                to={`/${nav.id}`}
-                style={isContact ? {} : !scrolled ? textShadowSoft : {}}
-                className={`fade-underline ${
-                  active === nav.title
-                    ? "text-[#33cfb0]"
-                    : isContact
-                    ? "text-[#001F3F]" // azul marinho fixo
-                    : scrolled
-                    ? "text-gray-900"
-                    : "text-white"
+        {/* Navbar links container with relative positioning */}
+        <div className="relative flex-1 mr-60 hidden sm:flex justify-end items-center">
+          <ul className="list-none flex justify-end items-center flex-1">
+            {navLinks.map((nav, index) => (
+              <li
+                key={nav.id}
+                className={`font-poppins font-light cursor-pointer text-[18px] ${
+                  index === navLinks.length - 1 ? "mr-0" : "mr-8"
                 }`}
               >
-                {nav.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <div className="sm:hidden flex flex-1 justify-end items-center pr-4">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className={`w-[28px] h-[28px] object-contain ${
-              scrolled ? "invert-0" : "invert"
-            }`}
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 bg-white/95 absolute top-20 right-4 my-2 min-w-[140px] rounded-xl shadow-lg`}
-          >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col">
-              {navLinks.map((nav, index) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-light cursor-pointer text-[18px] ${
-                    index === navLinks.length - 1 ? "mb-0" : "mb-4"
+                <Link
+                  to={`/${nav.id}`}
+                  style={isContact ? {} : !scrolled ? textShadowSoft : {}}
+                  className={`fade-underline ${
+                    active === nav.title
+                      ? "text-[#33cfb0]"
+                      : isContact
+                      ? "text-[#001F3F]"
+                      : scrolled
+                      ? "text-gray-900"
+                      : "text-white"
                   }`}
-                  onClick={() => {
-                    setActive(nav.title);
-                    setToggle(false);
-                  }}
                 >
-                  <Link
-                    to={`/${nav.id}`}
-                    className={`fade-underline ${
-                      active === nav.title
-                        ? "text-[#33cfb0]"
-                        : "text-gray-800"
+                  {nav.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Flags container - absolute positioned to the right of the links */}
+          {!scrolled && (
+            <div className="absolute right-[-80px] flex space-x-3 top-1/2 -translate-y-1/2">
+              <button>
+                <img src={brazilFlag} alt="Brazil" className="w-5 h-3 object-cover rounded-sm" />
+              </button>
+              <button>
+                <img src={usaFlag} alt="USA" className="w-5 h-3 object-cover rounded-sm" />
+              </button>
+              <button>
+                <img src={spainFlag} alt="Spain" className="w-5 h-3 object-cover rounded-sm" />
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* Mobile menu toggle */}
+        <div className="sm:hidden flex flex-1 justify-end items-center pr-4">
+          <button
+            onClick={() => setToggle(!toggle)}
+            aria-label={toggle ? "Fechar menu" : "Abrir menu"}
+            className="text-gray-900 dark:text-white text-3xl focus:outline-none"
+          >
+            {toggle ? <HiX /> : <HiMenu />}
+          </button>
+
+          {/* Mobile menu dropdown */}
+          {toggle && (
+            <div className="p-6 bg-white/95 absolute top-20 right-4 my-2 min-w-[140px] rounded-xl shadow-lg z-50">
+              <ul className="list-none flex justify-end items-start flex-1 flex-col">
+                {navLinks.map((nav, index) => (
+                  <li
+                    key={nav.id}
+                    className={`font-poppins font-light cursor-pointer text-[18px] ${
+                      index === navLinks.length - 1 ? "mb-0" : "mb-4"
                     }`}
+                    onClick={() => {
+                      setActive(nav.title);
+                      setToggle(false);
+                    }}
                   >
-                    {nav.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                    <Link
+                      to={`/${nav.id}`}
+                      className={`fade-underline ${
+                        active === nav.title ? "text-[#33cfb0]" : "text-gray-800"
+                      }`}
+                    >
+                      {nav.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </nav>
     </>

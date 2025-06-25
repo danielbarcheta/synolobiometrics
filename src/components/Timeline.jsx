@@ -78,13 +78,13 @@ const Timeline = () => {
                 >
                   <p
                     className="text-[#5ce6b1db] text-xl mb-1"
-                    style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 500 }}
+                    style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 700 }}
                   >
                     {item.ano}
                   </p>
                   <h3
                     className="text-gray-700 text-lg mb-2"
-                    style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 500 }}
+                    style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 700 }}
                   >
                     {item.titulo}
                   </h3>

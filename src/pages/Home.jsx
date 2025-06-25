@@ -4,6 +4,7 @@ import Solution from "../components/Solution";
 import Innovation from "../components/Innovation";
 import styles from "../style";
 import NatureHighlight from "../components/NatureHighlight";
+import ContactFloatingButton from "../components/ContactFloatingButton";
 
 const Home = () => {
   return (
@@ -23,6 +24,8 @@ const Home = () => {
       <Innovation />
       <NatureHighlight/>
       <Footer />
+      
+  <ContactFloatingButton />
     </div>
   );
 };

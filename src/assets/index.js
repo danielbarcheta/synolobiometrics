@@ -1,7 +1,6 @@
 import logo from "./logo.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import discount from "./fbi.png";
 import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
@@ -33,7 +32,6 @@ export {
   logowhite,
   menu,
   close,
-  discount,
   facebook,
   instagram,
   linkedin,
