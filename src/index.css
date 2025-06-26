@@ -759,3 +759,10 @@ ul {
   flex-shrink: 0; /* evita encolhimento */
   white-space: nowrap; /* evita quebra se quiser */
 }
+
+@font-face {
+  font-family: 'Libertinus Math';
+  src: url('/path/to/LibertinusMath-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}

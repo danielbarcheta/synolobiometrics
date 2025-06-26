@@ -59,8 +59,7 @@ const Navbar = ({ isContact = false }) => {
     const path =
       location.pathname === "/"
         ? "Home"
-        : navLinks.find((link) => `/${link.id}` === location.pathname)?.title ||
-          "";
+        : navLinks.find((link) => `/${link.id}` === location.pathname)?.title || "";
     setActive(path);
   }, [location]);
 
@@ -123,15 +122,12 @@ const Navbar = ({ isContact = false }) => {
           </Link>
         )}
 
-        {/* Navbar links container with relative positioning */}
-        <div className="relative flex-1 mr-60 hidden sm:flex justify-end items-center">
-          <ul className="list-none flex justify-end items-center flex-1">
-            {navLinks.map((nav, index) => (
+        <div className="relative flex-1 hidden sm:flex justify-end items-center space-x-8 mr-2">
+          <ul className="list-none flex justify-end items-center flex-1 relative z-10 space-x-8">
+            {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-light cursor-pointer text-[18px] ${
-                  index === navLinks.length - 1 ? "mr-0" : "mr-8"
-                }`}
+                className="font-poppins font-light cursor-pointer text-[18px]"
               >
                 <Link
                   to={`/${nav.id}`}
@@ -152,9 +148,8 @@ const Navbar = ({ isContact = false }) => {
             ))}
           </ul>
 
-          {/* Flags container - absolute positioned to the right of the links */}
           {!scrolled && (
-            <div className="absolute right-[-80px] flex space-x-3 top-1/2 -translate-y-1/2">
+            <div className="flex space-x-2">
               <button>
                 <img src={brazilFlag} alt="Brazil" className="w-5 h-3 object-cover rounded-sm" />
               </button>
@@ -168,7 +163,6 @@ const Navbar = ({ isContact = false }) => {
           )}
         </div>
 
-        {/* Mobile menu toggle */}
         <div className="sm:hidden flex flex-1 justify-end items-center pr-4">
           <button
             onClick={() => setToggle(!toggle)}
@@ -178,7 +172,6 @@ const Navbar = ({ isContact = false }) => {
             {toggle ? <HiX /> : <HiMenu />}
           </button>
 
-          {/* Mobile menu dropdown */}
           {toggle && (
             <div className="p-6 bg-white/95 absolute top-20 right-4 my-2 min-w-[140px] rounded-xl shadow-lg z-50">
               <ul className="list-none flex justify-end items-start flex-1 flex-col">

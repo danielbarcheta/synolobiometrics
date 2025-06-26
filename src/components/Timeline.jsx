@@ -110,7 +110,7 @@ const Timeline = () => {
           })}
         </div>
       </div>
-    </section>
+  </section>
   );
 };
 

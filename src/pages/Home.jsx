@@ -11,7 +11,7 @@ const Home = () => {
     <div className="bg-primary-gradient w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter} relative z-20`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar />
+<Navbar isLogoWhite={true} />
         </div>
       </div>
 

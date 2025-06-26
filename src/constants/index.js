@@ -16,6 +16,8 @@ import {
   equipment,
 } from "../assets";
 import synologo from '../assets/icon-synolo.png';
+import biometricupdate from "../assets/biometricupdate.png";
+import cryptoid from "../assets/cryptoid.png"
 
 export const navLinks = [
   {
@@ -272,3 +274,70 @@ export const timelineData = [
     imagem: img2025,
   },
 ];
+
+export const pressData = [
+  {
+    id: 1,
+    title: "Synolo® launches infant fingerprint biometric scanner in Brazil",
+    subtitle: "Dec 18, 2024",
+    summary:
+      "Exclusive Interview: U.S.-based Synolo® Biometrics has launched its biometric scanner specially designed for infant and neo-natal identification in the Brazilian market.",
+    link: "https://www.biometricupdate.com/202412/synolo-launches-infant-fingerprint-biometric-scanner-in-brazil",
+    image: biometricupdate,
+  },
+  {
+    id: 2,
+    title: "Synolo® Neo Scanner Now Available in Brazil",
+    subtitle: "Dec 17, 2024",
+    summary:
+      "Synolo® Biometrics, Inc., a global pioneer in infant and neonatal biometric identification, announced its strategic expansion into the Latin American market with the launch of its Synolo® Neo fingerprint scanner in Brazil. (Portuguese)",
+    link: "https://cryptoid.com.br/biometria/synolo-biometrics-lanca-solucao-para-biometria-infantil-na-america-latina/",
+    image: cryptoid,
+  },
+  {
+    id: 3,
+    title: "Uniqueness of fingerprints from birth explained in academic study",
+    subtitle: "February 14, 2023",
+    summary:
+      "“Glover et al provide the missing link in our understanding of the timing and drivers of human fingerprint development,” writes Dr. Aronoff-Spencer.",
+    link: "https://www.biometricupdate.com/202302/uniqueness-of-fingerprints-from-birth-explained-in-academic-study",
+    image: biometricupdate,
+  },
+  {
+    id: 4,
+    title: "Clinical research shows infant fingerprint biometrics nearing real-world effectiveness",
+    subtitle: "Jan 3, 2023",
+    summary:
+      "Confirming the identity of newborns in healthcare settings with biometrics may be within reach with current technology, according to a new academic research paper published by the U.S National Library of Medicine.",
+    link: "https://www.biometricupdate.com/202301/clinical-research-shows-infant-fingerprint-biometrics-nearing-real-world-effectiveness",
+    image: biometricupdate,
+  },
+  {
+    id: 5,
+    title: "NEC, researchers, collaborate on infant fingerprint biometrics scanner commercialization",
+    subtitle: "Nov 1, 2022",
+    summary:
+      "The developer of a device for capturing infants’ fingerprint biometrics is working towards commercialization as one of its co-founders prepares to present its technology at an event this month focused on Latin America.",
+    link: "https://www.biometricupdate.com/202211/nec-in-talks-with-researchers-commercializing-infant-fingerprint-biometrics-scanner",
+    image: biometricupdate,
+  },
+  {
+    id: 6,
+    title: "UC San Diego researchers unveil non-touch optical technology for infant fingerprinting",
+    subtitle: "Sep 13, 2018",
+    summary:
+      "University of California San Diego researchers have unveiled their non-touch optical capture device for newborn fingerprinting, which they say can capture fingerprints from the day of birth.",
+    link: "https://www.biometricupdate.com/201809/uc-san-diego-researchers-unveil-non-touch-optical-technology-for-infant-fingerprinting",
+    image: biometricupdate,
+  },
+  {
+    id: 7,
+    title: "Potential breakthrough in infant biometrics heads for trial in Kenya after ID4Africa appeal",
+    subtitle: "Jun 28, 2018",
+    summary:
+      "A team of researchers at the University of California San Diego’s Qualcomm Institute has experience in global development projects, including in Africa, and identity expertise in addition to health technology development specifically for resource-limited and remote settings.",
+    link: "https://www.biometricupdate.com/201806/potential-breakthrough-in-infant-biometrics-heads-for-trial-in-kenya-after-id4africa-appeal",
+    image: biometricupdate,
+  },
+];
+
