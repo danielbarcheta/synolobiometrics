@@ -35,7 +35,7 @@ export default function PressHero() {
     return () => carousel.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const titleColor = "rgba(255, 255, 255, 0.98)";
+  const titleColor = "rgba(248, 249, 252, 0.94)";
 
   const scrollToBottom = () => {
     if (sectionRef.current) {
@@ -52,12 +52,11 @@ export default function PressHero() {
       <div className="bg-black bg-opacity-60 w-full h-full absolute top-0 left-0 z-0" />
 
       <motion.div
-        className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-16 h-screen flex flex-col lg:flex-row items-center gap-[400px]"
+        className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-16 h-screen flex flex-col lg:flex-row items-center gap-[300px]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Left Content */}
         <div className="flex flex-col justify-between w-full lg:w-[50%] pt-40 pb-8 self-start lg:mt-12 h-[80vh]">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -65,13 +64,14 @@ export default function PressHero() {
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             <div className="flex items-center gap-3 ml-8 mb-2">
-              <GiEarthAmerica color={titleColor} size={32} />
+              <GiEarthAmerica color={titleColor} size={28} />
               <h1
                 className="font-normal"
                 style={{
-                  fontWeight: 400,
-                  fontSize: "1.875rem",
+                  fontWeight: 300,
+                  fontSize: "1.700rem",
                   color: titleColor,
+                  fontFamily: "'Space Grotesk', sans-serif",
                 }}
               >
                 International Recognition
@@ -83,7 +83,7 @@ export default function PressHero() {
                 className="font-bold max-w-5xl"
                 style={{
                   fontFamily: "'Libertinus Math', serif",
-                  fontSize: "2.25rem",
+                  fontSize: "2.15rem",
                   color: "white",
                 }}
               >
@@ -107,12 +107,14 @@ export default function PressHero() {
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             {pressData.slice(0, 2).map((item) => (
-              <a
+              <motion.a
                 key={item.id}
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group w-1/2"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <div className="w-full h-[100px] bg-white overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                   <img
@@ -125,12 +127,11 @@ export default function PressHero() {
                   <h3 className="text-sm font-semibold leading-snug">{item.title}</h3>
                   <p className="text-xs text-gray-300 mt-1">{item.subtitle}</p>
                 </div>
-              </a>
+              </motion.a>
             ))}
           </motion.div>
         </div>
 
-        {/* Right Content */}
         <motion.div
           className="hidden lg:flex flex-col w-full lg:w-[45%] h-[80vh] mt-[100px] items-end justify-center"
           initial={{ opacity: 0, x: 30 }}
@@ -164,14 +165,13 @@ export default function PressHero() {
         </motion.div>
       </motion.div>
 
-      {/* RESPONSIVE FIXES WITH TAILWIND */}
       <style jsx>{`
         @media (max-width: 1024px) {
           .gap-[400px] {
-            gap: 4rem; /* reduzindo gap grande para telas menores */
+            gap: 4rem;
           }
           .h-[80vh] {
-            height: auto !important; /* para adaptar altura */
+            height: auto !important;
           }
           .pt-40 {
             padding-top: 6rem;

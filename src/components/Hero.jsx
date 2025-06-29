@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[750px] max-h-[800px] overflow-hidden pt-16"
+      className="relative w-full min-h-[770px] max-h-[800px] overflow-hidden pt-16"
     >
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img
