@@ -339,7 +339,9 @@ export const pressData = [
     link: "https://www.biometricupdate.com/201806/potential-breakthrough-in-infant-biometrics-heads-for-trial-in-kenya-after-id4africa-appeal",
     image: biometricupdate,
   },
-];export const productHighlights = {
+];
+
+export const productHighlights = {
   hero: {
     title: "Synolo® Neo",
     subtitle: "Total biometrics from birth",

@@ -33,7 +33,7 @@ export function FeaturesSection({ features }) {
               >
                 <Icon className="w-10 h-10 text-white" />
                 <h3 className="text-xl font-semibold text-white">{f.title}</h3>
-                <p className="text-gray-300">{f.text}</p>
+                <p className="text-gray-300 text-sm">{f.text}</p>
               </motion.div>
             );
           })}

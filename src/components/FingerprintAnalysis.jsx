@@ -16,7 +16,6 @@ export function FingerprintAnalysis() {
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-32 px-4">
-        
         <div className="flex flex-col space-y-10 w-full max-w-sm">
           <div className="flex items-center gap-4">
             <div className="text-xl font-bold min-w-[2rem]">A-</div>
@@ -37,12 +36,12 @@ export function FingerprintAnalysis() {
             True Accept Rate (TAR) @ FMR = 0.1%
           </h3>
           <div className="overflow-x-auto w-full">
-            <table className="w-full text-left text-gray-700">
+            <table className="w-full text-gray-700">
               <thead>
                 <tr>
-                  <th className="pb-3 text-sm font-semibold">Fused Fingers</th>
-                  <th className="pb-3 text-sm font-semibold">Age at Enrollment</th>
-                  <th className="pb-3 text-sm font-semibold">TAR (%)</th>
+                  <th className="pb-3 text-sm font-semibold text-center">Fused Fingers</th>
+                  <th className="pb-3 text-sm font-semibold text-center">Age at Enrollment</th>
+                  <th className="pb-3 text-sm font-semibold text-center">TAR (%)</th>
                 </tr>
               </thead>
               <tbody>
@@ -57,9 +56,9 @@ export function FingerprintAnalysis() {
                   { fingers: 10, age: "≥ 4 days", tar: "100%" },
                 ].map((row, index) => (
                   <tr key={index} className={index % 2 === 0 ? "bg-gray-100" : ""}>
-                    <td className="py-2 text-sm font-medium">{row.fingers}</td>
-                    <td className="py-2 text-sm">{row.age}</td>
-                    <td className="py-2 text-sm font-semibold">{row.tar}</td>
+                    <td className="py-2 text-sm font-medium text-center">{row.fingers}</td>
+                    <td className="py-2 text-sm text-center">{row.age}</td>
+                    <td className="py-2 text-sm font-semibold text-center">{row.tar}</td>
                   </tr>
                 ))}
               </tbody>
