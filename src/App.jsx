@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Press from "./pages/Press";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
+import Technology from "./pages/Technology";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/technology" element={<Technology />} />
         <Route path="/press" element={<Press />} />
         {/* outras rotas */}
       </Routes>

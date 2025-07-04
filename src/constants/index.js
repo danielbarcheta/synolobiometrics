@@ -339,5 +339,53 @@ export const pressData = [
     link: "https://www.biometricupdate.com/201806/potential-breakthrough-in-infant-biometrics-heads-for-trial-in-kenya-after-id4africa-appeal",
     image: biometricupdate,
   },
-];
-
+];export const productHighlights = {
+  hero: {
+    title: "Synolo® Neo",
+    subtitle: "Total biometrics from birth",
+    description:
+      "Biometric identification solution for newborns and young children, with contactless scanner, high resolution, and advanced algorithms. Avoid baby swaps and ensure civil identity from birth.",
+  },
+  features: [
+    {
+      icon: "Fingerprint",
+      title: "Contactless Capture",
+      text: "Eliminates common distortions found in contact scanners, especially useful for newborns and young children.",
+    },
+    {
+      icon: "Cpu",
+      title: "Image Processing",
+      text: "Corrects age-related effects, enabling matching from early childhood to adulthood.",
+    },
+    {
+      icon: "Camera",
+      title: "High Resolution",
+      text: "Scanner with native 3000 PPI and processed image at 500 PPI for compatibility with any ABIS.",
+    },
+    {
+      icon: "MousePointerClick",
+      title: "Ergonomic Design",
+      text: "One-hand use and magnetic pads adaptable to any finger or age.",
+    },
+    {
+      icon: "Package",
+      title: "Multiple Use Cases",
+      text: "Fingerprint capture of babies, children, adults, and palm prints.",
+    },
+  ],
+  specs: [
+    { label: "Sensor Resolution", value: "3000 PPI" },
+    { label: "Processed Image", value: "500 PPI" },
+    { label: "FPS", value: "14 Hz" },
+    { label: "Light Source", value: "Blue LED" },
+    { label: "Interface", value: "USB-C 3.0 Superspeed" },
+    { label: "Dimensions", value: "14cm x 5.3cm x 6cm" },
+    { label: "Weight", value: "146g" },
+    { label: "Compatibility", value: "Windows 10, 11, and Linux" },
+  ],
+  cta: {
+    title: "Ready to innovate with infant biometrics?",
+    description: "Get in touch and discover how Synolo® Neo can transform civil identification.",
+    buttonText: "Contact Us",
+  }
+};
