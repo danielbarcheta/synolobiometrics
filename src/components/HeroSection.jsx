@@ -3,10 +3,20 @@ import neohand from "../assets/neohand.png";
 import img2017 from "../assets/2017.webp";
 
 export function HeroSection({ hero }) {
+  const handleScroll = () => {
+    window.scrollBy({
+      top: window.innerHeight * 0.9,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
-      className="relative min-h-screen w-full bg-white flex items-center justify-center overflow-hidden font-spaceGrotesk"
-      style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+      className="relative w-full flex items-center justify-center overflow-hidden font-spaceGrotesk"
+      style={{
+        fontFamily: "'Space Grotesk', sans-serif",
+        height: "95vh",
+      }}
     >
       <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
         <img
@@ -56,16 +66,11 @@ export function HeroSection({ hero }) {
             rel="noopener noreferrer"
             className="mt-20 inline-flex items-center space-x-3 cursor-pointer group"
           >
-            <img
-              src={img2017}
-              alt="Gates Open Research"
-              className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-            />
             <span
               className="text-black font-bold text-lg md:text-xl hover:underline"
               style={{ lineHeight: 1.2 }}
             >
-              Check out the Gates Open Research article on Neo
+              Check out the Articles
             </span>
             <svg
               className="w-6 h-6 text-black transition-transform group-hover:translate-x-1"
@@ -82,6 +87,14 @@ export function HeroSection({ hero }) {
           </a>
         </motion.div>
       </div>
+
+<button
+  onClick={handleScroll}
+  className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-transparent text-gray-900 hover:text-black text-sm md:text-base font-medium tracking-wide border border-gray-500 hover:border-black px-6 py-2 rounded-full transition-all duration-300"
+>
+  Details
+</button>
+
     </section>
   );
 }
