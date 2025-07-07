@@ -15,7 +15,9 @@
     "titleLine1": "Biometría",
     "highlight": "TOTAL",
     "titleLine2": "desde el nacimiento",
-    "certification": "Certificación del dispositivo de captura de un solo dedo PIV del FBI"
+    "certification": "Certificación del dispositivo de captura de un solo dedo PIV del FBI",
+        "checkArticles": "Consulta los Artículos",
+    "details": "Detalles"
   },
   "challenge": {
     "title": "El desafío: Captura de identificación de recién nacidos a niños de 8 años",

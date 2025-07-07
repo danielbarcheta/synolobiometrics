@@ -15,7 +15,9 @@
     "titleLine1": "Total",
     "highlight": "biometrics",
     "titleLine2": "from birth",
-    "certification": "FBI's PIV Single Finger Capture Device Certification"
+    "certification": "FBI's PIV Single Finger Capture Device Certification",
+        "checkArticles": "Check out the Articles",
+    "details": "Details"
   },
   "challenge": {
     "title": "The Challenge: Newborn to 8 year old ID Capture",

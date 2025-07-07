@@ -15,7 +15,9 @@
     "titleLine1": "Biometria",
     "highlight": "total",
     "titleLine2": "desde o nascimento",
-    "certification": "Certificação FBI PIV - Dispositivo de Captura de Dedo Único"
+    "certification": "Certificação FBI PIV - Dispositivo de Captura de Dedo Único",
+        "checkArticles": "Confira os Artigos",
+    "details": "Detalhes"
   },
   "challenge": {
     "title": "O Desafio: Captura de Identidade de Recém-nascidos até 8 anos",

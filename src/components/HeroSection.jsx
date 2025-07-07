@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import neohand from "../assets/neohand.png";
-import img2017 from "../assets/2017.webp";
+import { useTranslation } from "react-i18next";
 
 export function HeroSection({ hero }) {
+  const { t } = useTranslation();
+
   const handleScroll = () => {
     window.scrollBy({
       top: window.innerHeight * 0.9,
@@ -70,7 +72,7 @@ export function HeroSection({ hero }) {
               className="text-black font-bold text-lg md:text-xl hover:underline"
               style={{ lineHeight: 1.2 }}
             >
-              Check out the Articles
+              {t("hero.checkArticles")}
             </span>
             <svg
               className="w-6 h-6 text-black transition-transform group-hover:translate-x-1"
@@ -88,13 +90,12 @@ export function HeroSection({ hero }) {
         </motion.div>
       </div>
 
-<button
-  onClick={handleScroll}
-  className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-transparent text-gray-900 hover:text-black text-sm md:text-base font-medium tracking-wide border border-gray-500 hover:border-black px-6 py-2 rounded-full transition-all duration-300"
->
-  Details
-</button>
-
+      <button
+        onClick={handleScroll}
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-transparent text-gray-900 hover:text-black text-sm md:text-base font-medium tracking-wide border border-gray-500 hover:border-black px-6 py-2 rounded-full transition-all duration-300"
+      >
+        {t("hero.details")}
+      </button>
     </section>
   );
 }
