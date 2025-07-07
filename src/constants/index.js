@@ -22,25 +22,26 @@ import cryptoid from "../assets/cryptoid.png"
 export const navLinks = [
   {
     id: "about",
-    title: "About us",
+    title: "navbar.about",
   },
   {
     id: "technology",
-    title: "Technology",
+    title: "navbar.technology",
   },
-    {
+  {
     id: "press",
-    title: "Press"
+    title: "navbar.press"
   },
   {
     id: "blog",
-    title: "Blog",
+    title: "navbar.blog",
   },
   {
     id: "contact",
-    title: "Contact Us",
+    title: "navbar.contact",
   },
 ];
+
 
 export const features = [
   {
@@ -375,7 +376,7 @@ export const productHighlights = {
       text: "Fingerprint capture of babies, children, adults, and palm prints.",
     },
   ],
-  specs: [
+  specsNeo: [
     { label: "Sensor Resolution", value: "3000 PPI" },
     { label: "Processed Image", value: "500 PPI" },
     { label: "FPS", value: "14 Hz" },

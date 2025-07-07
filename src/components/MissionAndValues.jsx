@@ -1,5 +1,6 @@
 import { FaFingerprint, FaBaby, FaHeart, FaGlobeAmericas } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const brandColor = "#ffffff";
 
@@ -17,11 +18,13 @@ const itemVariants = {
 };
 
 export default function MissionAndValues() {
+  const { t } = useTranslation();
+
   const items = [
-    { icon: FaFingerprint, label: "Innovation" },
-    { icon: FaBaby, label: "Compassion" },
-    { icon: FaHeart, label: "Integrity" },
-    { icon: FaGlobeAmericas, label: "Global Impact" },
+    { icon: FaFingerprint, label: t("mission.innovation") },
+    { icon: FaBaby, label: t("mission.compassion") },
+    { icon: FaHeart, label: t("mission.integrity") },
+    { icon: FaGlobeAmericas, label: t("mission.globalImpact") },
   ];
 
   return (

@@ -10,7 +10,6 @@ import {
   Weight,
   MonitorSmartphone,
 } from "lucide-react";
-
 import neo1 from "../assets/neo1.png";
 import neo2 from "../assets/neo2.png";
 import neo3 from "../assets/neo3.png";
@@ -29,7 +28,7 @@ const iconMap = {
 
 const images = [neo1, neo2, neo3, neo4];
 
-export function SpecsSection({ specs }) {
+export function SpecsSection({ specsNeo }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -41,7 +40,6 @@ export function SpecsSection({ specs }) {
 
   return (
     <section className="flex flex-col lg:flex-row bg-white px-6 lg:px-20 py-16 font-spaceGrotesk gap-16 max-w-screen-xl mx-auto">
-      
       <div className="w-full lg:w-1/2 flex flex-col items-center justify-start gap-6 relative">
         <div className="relative w-full h-[320px] flex items-center justify-center">
           {images.map((img, idx) => (
@@ -63,22 +61,22 @@ export function SpecsSection({ specs }) {
         </div>
 
         <div className="text-left w-full max-w-xl">
-          <h3 className="text-2xl font-bold text-slate-800 mb-3">The Synolo Neo</h3>
+          <h3 className="text-2xl font-bold text-slate-800 mb-3">
+            {specsNeo.title}
+          </h3>
           <p className="text-gray-700 leading-relaxed text-justify">
-            The Synolo Neo is equipped with modular tops to acquire contactless fingerprint images from birth to adulthood.
-            Its fixed-focus camera and consistent LED lighting minimize variation and ensure image quality. 
-            Magnetically replaceable tops help guide finger placement, improving consistency across age groups and hand sizes.
+            {specsNeo.description}
           </p>
         </div>
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col">
         <h2 className="text-3xl font-bold text-slate-800 mb-10">
-          Specifications
+          {specsNeo.subtitle}
         </h2>
         <div className="flex-grow flex items-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
-            {specs.map((spec, idx) => {
+            {specsNeo.specs.map((spec, idx) => {
               const Icon = iconMap[spec.label] || ScanLine;
               return (
                 <motion.div
@@ -89,7 +87,7 @@ export function SpecsSection({ specs }) {
                   <Icon className="w-8 h-8 text-[#33cfabd5] flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-slate-800">
-                      {spec.label}
+                      {specsNeo.labels[spec.label]}
                     </h3>
                     <p className="text-gray-700">{spec.value}</p>
                   </div>
@@ -99,7 +97,6 @@ export function SpecsSection({ specs }) {
           </div>
         </div>
       </div>
-
     </section>
   );
 }

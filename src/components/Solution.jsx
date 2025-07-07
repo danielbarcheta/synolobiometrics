@@ -14,35 +14,22 @@ import {
 } from "@heroicons/react/24/outline";
 
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const cardData = [
-  {
-    text: "Specifically designed to capture and match fingerprints from birth to adulthood",
-    icon: FingerPrintIcon,
-  },
-  {
-    text: "Incorporates patented imaging and usability technology developed at UCSD under grant from Gates Foundation",
-    icon: AcademicCapIcon,
-  },
-  {
-    text: "Scientifically proven to provide 1:N matching from birth to adulthood in multiple studies of over 800 infants, newborns, children and adults",
-    icon: ChartBarIcon,
-  },
-  {
-    text: "Currently in use in hospitals, clinics and schools in the US, Europe, Middle East and LATAM",
-    icon: GlobeAltIcon,
-  },
-  {
-    text: "SDK available for integration with customer biometric systems",
-    icon: CodeBracketIcon,
-  },
-  {
-    text: "Age-corrected images output in standard 500 dpi and super hi-res",
-    icon: CameraIcon,
-  },
+const icons = [
+  FingerPrintIcon,
+  AcademicCapIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  CodeBracketIcon,
+  CameraIcon,
 ];
 
 const Solution = () => {
+  const { t } = useTranslation();
+
+  const cardTexts = t("solution.cards", { returnObjects: true });
+
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
     AOS.refresh();
@@ -66,7 +53,7 @@ const Solution = () => {
                 color: "#fff",
               }}
             >
-              The Solution
+              {t("solution.title")}
             </h1>
             <h2
               className="font-semibold"
@@ -77,7 +64,7 @@ const Solution = () => {
                 color: "#5ce6b1db",
               }}
             >
-              Synolo® Neo Fingerprint Reader
+              {t("solution.subtitle")}
             </h2>
           </div>
 
@@ -85,19 +72,22 @@ const Solution = () => {
             className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[600px]"
             data-aos="fade-up"
           >
-            {cardData.map(({ text, icon: Icon }, idx) => (
-              <div
-                key={idx}
-                className="flex items-start gap-3"
-                data-aos="fade-up"
-                data-aos-delay={idx * 100}
-              >
-                <Icon className="w-5 h-5 text-[#5ce6b1db] flex-shrink-0 mt-1" />
-                <p className="text-[clamp(0.8rem,2vw,1rem)] leading-relaxed font-medium">
-                  {text}
-                </p>
-              </div>
-            ))}
+            {cardTexts.map((text, idx) => {
+              const Icon = icons[idx];
+              return (
+                <div
+                  key={idx}
+                  className="flex items-start gap-3"
+                  data-aos="fade-up"
+                  data-aos-delay={idx * 100}
+                >
+                  <Icon className="w-5 h-5 text-[#5ce6b1db] flex-shrink-0 mt-1" />
+                  <p className="text-[clamp(0.8rem,2vw,1rem)] leading-relaxed font-medium">
+                    {text}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -131,8 +121,7 @@ const Solution = () => {
             className="w-full max-w-[600px] h-auto object-contain relative z-10"
           />
 
-          {/* Botão no desktop: canto inferior direito absoluto
-              No mobile: fica abaixo da imagem, centralizado */}
+          {/* Botão */}
           <Link
             to="/technology"
             className="
@@ -154,7 +143,7 @@ const Solution = () => {
               whitespace-nowrap
             "
           >
-            View More
+            {t("solution.button")}
             <ArrowRightIcon className="w-4 h-4 md:w-5 md:h-5 stroke-[1.5]" />
           </Link>
         </div>

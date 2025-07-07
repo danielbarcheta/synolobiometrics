@@ -1,11 +1,29 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { timelineData } from "../constants";
+import { useTranslation } from "react-i18next";
 
-const ArrowRightIcon = () => (
+import img2017 from '../assets/2017.webp';
+import img2019 from '../assets/2019.jpg';
+import synologo from '../assets/synologo.png';
+import img2022 from '../assets/2022.svg';
+import equipment from '../assets/equipment.png';
+import img2024 from '../assets/2024.png';
+import img2025 from '../assets/2025.jpeg';
+
+const imagesMap = {
+  img2017,
+  img2019,
+  synologo,
+  img2022,
+  equipment,
+  img2024,
+  img2025,
+};
+
+const ArrowRightIcon = ({ className }) => (
   <svg
-    className="w-4 h-4 mr-2 flex-shrink-0 text-[#5ce6b1db]"
+    className={`w-4 h-4 flex-shrink-0 text-[#5ce6b1db] ${className}`}
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -18,22 +36,33 @@ const ArrowRightIcon = () => (
 );
 
 const Timeline = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  const renderContent = (content) => {
+  const timelineData = t("timeline", { returnObjects: true });
+
+  const renderContent = (content, isLeft) => {
     if (Array.isArray(content)) {
       return (
-        <ul className="list-none p-0 m-0 space-y-2">
+        <ul
+          className="list-none p-0 m-0 space-y-2"
+          style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 200 }}
+        >
           {content.map((item, i) => (
             <li
               key={i}
-              className="flex items-start text-gray-600 leading-snug text-base"
+              className={`flex items-start leading-snug text-base ${
+                isLeft ? "flex-row-reverse" : ""
+              }`}
               style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 200 }}
             >
-              <ArrowRightIcon />
-              <span>{item}</span>
+              <ArrowRightIcon className={isLeft ? "ml-2" : "mr-2"} />
+              <span className={isLeft ? "text-right" : "text-left"} style={{ flex: 1 }}>
+                {item}
+              </span>
             </li>
           ))}
         </ul>
@@ -41,7 +70,9 @@ const Timeline = () => {
     }
     return (
       <p
-        className="text-gray-600 whitespace-pre-line leading-snug text-base"
+        className={`whitespace-pre-line leading-snug text-base ${
+          isLeft ? "text-right" : "text-left"
+        }`}
         style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 200 }}
       >
         {content}
@@ -49,18 +80,15 @@ const Timeline = () => {
     );
   };
 
-  const rightSideIds = ["citer-study"];
+  const sortedTimeline = timelineData.slice().sort((a, b) => a.ano - b.ano);
 
   return (
     <section className="relative w-full bg-white py-16 px-4 md:px-12">
       <div className="relative max-w-5xl mx-auto">
         <div className="absolute left-1/2 top-0 h-full w-0.5 border-l border-dashed border-gray-300 transform -translate-x-1/2 z-0" />
-
         <div className="flex flex-col gap-16">
-          {timelineData.slice().map((item, idx) => {
-            const forceRight = rightSideIds.includes(item.id);
-            const isLeft = forceRight ? false : idx % 2 === 0;
-
+          {sortedTimeline.map((item, idx) => {
+            const isLeft = idx % 2 === 0;
             return (
               <div
                 key={item.id}
@@ -70,7 +98,6 @@ const Timeline = () => {
                 data-aos={isLeft ? "fade-right" : "fade-left"}
               >
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-[#5ce6b1db] rounded-full z-10 shadow-sm" />
-
                 <div
                   className={`w-full md:w-1/2 px-4 md:px-6 ${
                     isLeft ? "text-right" : "text-left"
@@ -88,10 +115,9 @@ const Timeline = () => {
                   >
                     {item.titulo}
                   </h3>
-                  {renderContent(item.conteudo)}
+                  {renderContent(item.conteudo, isLeft)}
                 </div>
-
-                {item.imagem && (
+                {item.imagem && imagesMap[item.imagem] && (
                   <div
                     className={`w-full md:w-1/2 mt-4 md:mt-0 flex justify-center ${
                       isLeft ? "md:mr-1" : "md:ml-1"
@@ -99,7 +125,7 @@ const Timeline = () => {
                     style={{ maxWidth: "100px" }}
                   >
                     <img
-                      src={item.imagem}
+                      src={imagesMap[item.imagem]}
                       alt={item.titulo}
                       className="w-24 h-24 rounded-full object-cover shadow-sm border border-gray-100"
                     />
@@ -110,7 +136,7 @@ const Timeline = () => {
           })}
         </div>
       </div>
-  </section>
+    </section>
   );
 };
 

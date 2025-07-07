@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -12,6 +13,7 @@ import scroll4 from "../assets/partner4.svg";
 import scroll5 from "../assets/partner5.png";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -57,8 +59,9 @@ const Hero = () => {
                 marginBottom: 0,
               }}
             >
-              Total <br className="sm:block hidden" />
-              <span className="text-gradient">biometrics</span>
+              {t("hero.titleLine1")}
+              <br className="sm:block hidden" />
+              <span className="text-gradient">{t("hero.highlight")}</span>
             </h1>
             <h1
               className="leading-[1.1] text-gray-900 uppercase text-[2.5rem] sm:text-[clamp(1.2rem,5.5vw,4.5rem)] sm:normal-case"
@@ -67,7 +70,7 @@ const Hero = () => {
                 fontWeight: 800,
               }}
             >
-              from birth
+              {t("hero.titleLine2")}
             </h1>
           </div>
 
@@ -78,7 +81,7 @@ const Hero = () => {
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-gray-800 font-semibold text-[clamp(1rem,1.2vw,1.3rem)]">
               <MdOutlineCheckCircle className="text-[#5ce6b1db] text-[2rem] flex-shrink-0" />
               <span className="min-w-0 text-center md:text-left">
-                FBI's PIV Single Finger Capture Device Certification
+                {t("hero.certification")}
               </span>
             </div>
           </div>

@@ -1,0 +1,271 @@
+{
+  "navbar": {
+    "about": "About us",
+    "technology": "Technology",
+    "press": "Press",
+    "blog": "Blog",
+    "contact": "Contact Us"
+  },
+   "aboutHero": {
+    "title": "About Us",
+    "paragraph1": "Synolo® Biometrics was created to commercialize the infant biometrics collection technology developed at UC San Diego with funding from the Gates Foundation. This technology was clinically proven in a large joint study performed in a major hospital in Mexico, utilizing prototype devices and offline image processing.",
+    "paragraph2": "Since forming Synolo® in 2021, the original \"Panda\" prototype has been transformed into a fully commercialized unit with proprietary, real-time, high resolution image processing, ergonomic design, and a robust SDK for OEM integration that is already successfully deployed in the field in the US and Brazil."
+  },
+  "hero": {
+    "titleLine1": "Total",
+    "highlight": "biometrics",
+    "titleLine2": "from birth",
+    "certification": "FBI's PIV Single Finger Capture Device Certification"
+  },
+  "challenge": {
+    "title": "The Challenge: Newborn to 8 year old ID Capture",
+    "subtitle": "Why infant print identification is so difficult?",
+    "failurePoints": [
+      {
+        "title": "Standard 500ppi Fails",
+        "description": "Infant prints are tiny and require highly sophisticated imaging techniques; high-resolution alone is not enough."
+      },
+      {
+        "title": "Standard Contact Readers Fails",
+        "description": "Infant fingers are easily deformable and fingerprints are distorted by contact pressure, obscuring details."
+      },
+      {
+        "title": "Standard Non-Contact Readers Fails",
+        "description": "Infants' behavior make them difficult to position for consistent image quality."
+      },
+      {
+        "title": "Longitudinal Matching Fails",
+        "description": "As infants grow to be adults, matching becomes difficult or impossible without accommodating age-related changes."
+      }
+    ]
+  },
+  "solution": {
+    "title": "The Solution",
+    "subtitle": "Synolo® Neo Fingerprint Reader",
+    "cards": [
+      "Specifically designed to capture and match fingerprints from birth to adulthood",
+      "Incorporates patented imaging and usability technology developed at UCSD under grant from Gates Foundation",
+      "Scientifically proven to provide 1:N matching from birth to adulthood in multiple studies of over 800 infants, newborns, children and adults",
+      "Currently in use in hospitals, clinics and schools in the US, Europe, Middle East and LATAM",
+      "SDK available for integration with customer biometric systems",
+      "Age-corrected images output in standard 500 dpi and super hi-res"
+    ],
+    "button": "View More"
+  },
+"productHighlights": {
+  "specsNeo": {
+    "title": "The Synolo Neo",
+    "subtitle": "Specifications",
+    "description": "The Synolo Neo is equipped with modular tops to acquire contactless fingerprint images from birth to adulthood. Its fixed-focus camera and consistent LED lighting minimize variation and ensure image quality. Magnetically replaceable tops help guide finger placement, improving consistency across age groups and hand sizes.",
+    "specs": [
+      { "label": "Sensor Resolution", "value": "3000 PPI" },
+      { "label": "Processed Image", "value": "500 PPI" },
+      { "label": "FPS", "value": "14 Hz" },
+      { "label": "Light Source", "value": "Blue LED" },
+      { "label": "Interface", "value": "USB-C 3.0 Superspeed" },
+      { "label": "Dimensions", "value": "14cm x 5.3cm x 6cm" },
+      { "label": "Weight", "value": "146g" },
+      { "label": "Compatibility", "value": "Windows 10, 11, and Linux" }
+    ],
+    "labels": {
+      "Sensor Resolution": "Sensor Resolution",
+      "Processed Image": "Processed Image",
+      "FPS": "FPS",
+      "Light Source": "Light Source",
+      "Interface": "Interface",
+      "Dimensions": "Dimensions",
+      "Weight": "Weight",
+      "Compatibility": "Compatibility"
+    }
+  },
+    "cta": {
+    "title": "Ready to innovate with infant biometrics?",
+    "description": "Get in touch and discover how Synolo® Neo can transform civil identification.",
+    "buttonText": "Contact Us"
+  },
+  "hero": {
+    "title": "Synolo® Neo",
+    "subtitle": "Total biometrics from birth",
+    "description": "Biometric identification solution for newborns and young children, with contactless scanner, high resolution, and advanced algorithms. Avoid baby swaps and ensure civil identity from birth."
+  },
+  "features": [
+    {
+      "icon": "Fingerprint",
+      "title": "Contactless Capture",
+      "text": "Eliminates common distortions found in contact scanners, especially useful for newborns and young children."
+    },
+    {
+      "icon": "Cpu",
+      "title": "Image Processing",
+      "text": "Corrects age-related effects, enabling matching from early childhood to adulthood."
+    },
+    {
+      "icon": "Camera",
+      "title": "High Resolution",
+      "text": "Scanner with native 3000 PPI and processed image at 500 PPI for compatibility with any ABIS."
+    },
+    {
+      "icon": "MousePointerClick",
+      "title": "Ergonomic Design",
+      "text": "One-hand use and magnetic pads adaptable to any finger or age."
+    },
+    {
+      "icon": "Package",
+      "title": "Multiple Use Cases",
+      "text": "Fingerprint capture of babies, children, adults, and palm prints."
+    }
+  ]
+},
+
+  "innovation": {
+  "title": "Synolo® Technology",
+  "topics": [
+    "The Synolo® Neo incorporates patented imaging technology that combines the best of contact and contactless fingerprint readers, ensuring the highest quality images even from the smallest newborn fingers.",
+    "Combined with high-resolution optics and proprietary image processing and age-correction algorithms, the Synolo® Neo is the only scientifically proven solution to enable life-long 1:N matching from birth to adulthood."
+  ]
+  },
+"nature": {
+  "featuredIn": "Featured in",
+  "publication": "Nature Scientific Reports",
+  "description": "Our Synolo® Neo technology was highlighted in a publication by the scientific journal Nature, reinforcing its effectiveness in biometric identification of newborns during vaccination and hospital care.",
+  "button": "View Publication",
+  "totalSubjects": "Total Subjects",
+  "newbornsEnrolled": "Newborns Enrolled",
+  "tarNewborns": "TAR Newborns",
+  "tar4plus": "TAR 4+ Days",
+  "tarNewbornsLabel": "TAR Newborns (%)",
+  "tar4plusLabel": "TAR 4+ Days (%)",
+  "other": "Other"
+},
+ "timeline": [
+    {
+      "id": "grant",
+      "ano": "2017",
+      "titulo": "Gates Foundation Grant",
+      "conteudo": "A $3M grant provided to UC San Diego started it all. The Gates Foundation approached Dr. Eliah Aronoff-Spencer to lead a project to determine if - and how - newborns and infants could be identified for vaccine delivery using biometrics.",
+      "imagem": "img2017"
+    },
+    {
+      "id": "poc-study",
+      "ano": "2019",
+      "titulo": "UCSD/Gates POC Study",
+      "conteudo": "The resulting pilot study led by UCSD's team validated that a new, non-contact, high resolution fingerprint device (the 'Panda') combined with novel image processing algorithms, could successfully identify 500 newborns and infants in a hospital setting.",
+      "imagem": "img2019"
+    },
+    {
+      "id": "synolo-formed",
+      "ano": "2021",
+      "titulo": "Synolo® Biometrics Formed",
+      "conteudo": "Synolo® Biometrics was formed by key members of the UCSD team and seasoned entrepreneurs to commercialize the technology. Funding was provided by BioPacific Investors angel group.",
+      "imagem": "synologo"
+    },
+    {
+      "id": "neo-launched",
+      "ano": "2022",
+      "titulo": "Synolo® Neo Launched",
+      "conteudo": [
+        "Improved ergonomics and usability",
+        "Real-time vs. offline image processing",
+        "Interchangeable aperture thumbwheels",
+        "Optimized imaging technology with proprietary age-correction algorithms",
+        "Simplified manufacturing and assembly"
+      ],
+      "imagem": "equipment"
+    },
+    {
+      "id": "citer-study",
+      "ano": "2022",
+      "titulo": "CITeR/NSF Study Launched",
+      "conteudo": [
+        "POC study at NY hospitals, clinics and schools",
+        "~300 infants/youth covering birth to 15 years old",
+        "Multi-year study conducted by CITeR and Clarkson University"
+      ],
+      "imagem": "img2022"
+    },
+    {
+      "id": "first-poc",
+      "ano": "2023",
+      "titulo": "First Commercial POC",
+      "conteudo": [
+        "NEC, a major global company with 110,000 employees and operations in 50 countries, announced a POC study using Synolo® Neo",
+        "Short term study (1-2 months) to be conducted at a major hospital in South America",
+        "Collect fingerprints ~500 infants at birth and verify on discharge"
+      ],
+      "imagem": ""
+    },
+    {
+      "id": "launch-brazil",
+      "ano": "2024",
+      "titulo": "Synolo® Launches in Brazil",
+      "conteudo": [
+        "Synolo® announces expansion into Latin America with the commercial launch of the Synolo® Neo fingerprint reader in Brazil",
+        "This initiative reinforces the company's commitment to providing innovative biometric and civil identification solutions that ensure the protection of babies and children from the earliest stages of life through key local partners"
+      ],
+      "imagem": "img2024"
+    },
+    {
+      "id": "fbi-certification",
+      "ano": "2025",
+      "titulo": "FBI Certification",
+      "conteudo": "Synolo® Neo becomes the first non-contact device designed for infant and child as well as adult biometrics to receive FBI PIV single finger certification.",
+      "imagem": "img2025"
+    }
+  ],
+  
+  "partnersShowcase": {
+    "title": "Our Global Partners",
+    "button": "Become a partner"
+  },
+    "mission": {
+    "innovation": "Innovation",
+    "compassion": "Compassion",
+    "integrity": "Integrity",
+    "globalImpact": "Global Impact"
+  },
+"pressHero": {
+    "title": "International Recognition",
+    "subtitle": "Media coverage of Synolo® Biometrics and presentations given by key team members across the globe.",
+    "blogLink": "Our blog"
+  },
+   "contact": {
+    "title": "Chat to our team",
+    "description": "Want to learn more about the only clinically proven system to accurately capture and verify newborn and adult fingerprints? Then complete this form and we'll get back to you shortly.",
+    "imageAlt": "Team Chat",
+    "quote": "We can't redesign infants, so we have to design new technology. From day one, we knew we had to rethink this problem from the ground up.",
+    "quoteAuthor": "Dr. Eliah Aronoff-Spencer",
+    "quoteRole": "Inventor of the Synolo® Neo"
+  },
+  "form": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "selectSubject": "Select subject",
+    "subjects": {
+      "partnership": "Partnership",
+      "doubts": "Doubts",
+      "getSolution": "Get the solution",
+      "other": "Other"
+    },
+    "message": "Your message...",
+    "sendMessage": "Send message"
+  },
+  "errors": {
+    "firstNameRequired": "First name is required",
+    "lastNameRequired": "Last name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email format",
+    "phoneRequired": "Phone is required",
+    "subjectRequired": "Subject is required",
+    "messageRequired": "Message is required"
+  },
+  "toast": {
+    "messageSent": "Message sent successfully!"
+  }
+
+
+
+}
+
+

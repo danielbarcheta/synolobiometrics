@@ -3,12 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { logo, iconsynolo } from "../assets";
 import { navLinks } from "../constants";
+import { useTranslation } from "react-i18next";
 
 const brazilFlag = "https://flagcdn.com/w20/br.png";
 const usaFlag = "https://flagcdn.com/w20/us.png";
 const spainFlag = "https://flagcdn.com/w20/es.png";
 
 const Navbar = ({ isContact = false }) => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
@@ -62,6 +64,10 @@ const Navbar = ({ isContact = false }) => {
         : navLinks.find((link) => `/${link.id}` === location.pathname)?.title || "";
     setActive(path);
   }, [location]);
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <>
@@ -142,7 +148,7 @@ const Navbar = ({ isContact = false }) => {
                       : "text-white"
                   }`}
                 >
-                  {nav.title}
+                  {t(`navbar.${nav.id}`)}
                 </Link>
               </li>
             ))}
@@ -150,14 +156,14 @@ const Navbar = ({ isContact = false }) => {
 
           {!scrolled && (
             <div className="flex space-x-2">
-              <button>
-                <img src={brazilFlag} alt="Brazil" className="w-5 h-3 object-cover rounded-sm" />
+              <button onClick={() => changeLanguage('pt')}>
+                <img src={brazilFlag} alt="Português" className="w-5 h-3 object-cover rounded-sm" />
               </button>
-              <button>
-                <img src={usaFlag} alt="USA" className="w-5 h-3 object-cover rounded-sm" />
+              <button onClick={() => changeLanguage('en')}>
+                <img src={usaFlag} alt="English" className="w-5 h-3 object-cover rounded-sm" />
               </button>
-              <button>
-                <img src={spainFlag} alt="Spain" className="w-5 h-3 object-cover rounded-sm" />
+              <button onClick={() => changeLanguage('es')}>
+                <img src={spainFlag} alt="Español" className="w-5 h-3 object-cover rounded-sm" />
               </button>
             </div>
           )}
@@ -166,7 +172,7 @@ const Navbar = ({ isContact = false }) => {
         <div className="sm:hidden flex flex-1 justify-end items-center pr-4">
           <button
             onClick={() => setToggle(!toggle)}
-            aria-label={toggle ? "Fechar menu" : "Abrir menu"}
+            aria-label={toggle ? t("navbar.menu_close") : t("navbar.menu_open")}
             className="text-gray-900 dark:text-white text-3xl focus:outline-none"
           >
             {toggle ? <HiX /> : <HiMenu />}
@@ -192,7 +198,7 @@ const Navbar = ({ isContact = false }) => {
                         active === nav.title ? "text-[#33cfb0]" : "text-gray-800"
                       }`}
                     >
-                      {nav.title}
+                      {t(`navbar.${nav.id}`)}
                     </Link>
                   </li>
                 ))}

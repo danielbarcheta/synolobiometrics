@@ -1,0 +1,269 @@
+{
+  "navbar": {
+    "about": "Sobre nós",
+    "technology": "Tecnologia",
+    "press": "Imprensa",
+    "blog": "Blog",
+    "contact": "Contato"
+  },
+  "aboutHero": {
+    "title": "Sobre Nós",
+    "paragraph1": "A Synolo® Biometrics foi criada para comercializar a tecnologia de coleta de biometria infantil desenvolvida na UC San Diego com financiamento da Fundação Gates. Essa tecnologia foi clinicamente comprovada em um grande estudo conjunto realizado em um hospital importante no México, utilizando dispositivos protótipos e processamento de imagem offline.",
+    "paragraph2": "Desde a formação da Synolo® em 2021, o protótipo original 'Panda' foi transformado em uma unidade totalmente comercializada com processamento de imagem proprietário em tempo real e alta resolução, design ergonômico e um SDK robusto para integração OEM, já implantado com sucesso nos EUA e no Brasil."
+  },
+  "hero": {
+    "titleLine1": "Biometria",
+    "highlight": "total",
+    "titleLine2": "desde o nascimento",
+    "certification": "Certificação FBI PIV - Dispositivo de Captura de Dedo Único"
+  },
+  "challenge": {
+    "title": "O Desafio: Captura de Identidade de Recém-nascidos até 8 anos",
+    "subtitle": "Por que é tão difícil identificar impressões digitais infantis?",
+    "failurePoints": [
+      {
+        "title": "500ppi Padrão Falha",
+        "description": "As impressões digitais infantis são minúsculas e exigem técnicas de imagem altamente sofisticadas; alta resolução por si só não é suficiente."
+      },
+      {
+        "title": "Leitores de Contato Padrão Falham",
+        "description": "Os dedos dos bebês são facilmente deformáveis e as impressões digitais são distorcidas pela pressão de contato, obscurecendo os detalhes."
+      },
+      {
+        "title": "Leitores Sem Contato Padrão Falham",
+        "description": "O comportamento dos bebês torna difícil posicioná-los para uma imagem consistente."
+      },
+      {
+        "title": "Correspondência Longitudinal Falha",
+        "description": "À medida que os bebês crescem, a correspondência torna-se difícil ou impossível sem acomodar as mudanças relacionadas à idade."
+      }
+    ]
+  },
+  "solution": {
+    "title": "A Solução",
+    "subtitle": "Leitor de Impressões Digitais Synolo® Neo",
+    "cards": [
+      "Projetado especificamente para capturar e corresponder impressões digitais desde o nascimento até a idade adulta",
+      "Incorpora tecnologia patenteada de imagem e usabilidade desenvolvida na UCSD com financiamento da Fundação Gates",
+      "Comprovadamente fornece correspondência 1:N desde o nascimento até a idade adulta em múltiplos estudos com mais de 800 bebês, recém-nascidos, crianças e adultos",
+      "Atualmente em uso em hospitais, clínicas e escolas nos EUA, Europa, Oriente Médio e América Latina",
+      "SDK disponível para integração com sistemas biométricos do cliente",
+      "Imagens com correção de idade em 500 dpi padrão e super alta resolução"
+    ],
+    "button": "Ver Mais"
+  },
+  "productHighlights": {
+    "specsNeo": {
+      "title": "O Synolo Neo",
+      "subtitle": "Especificações",
+      "description": "O Synolo Neo é equipado com tampas modulares para capturar imagens de impressões digitais sem contato desde o nascimento até a idade adulta. Sua câmera com foco fixo e iluminação LED consistente minimizam a variação e garantem a qualidade da imagem. As tampas substituíveis magneticamente ajudam a guiar o posicionamento dos dedos, melhorando a consistência entre diferentes faixas etárias e tamanhos de mãos.",
+      "specs": [
+        { "label": "Sensor Resolution", "value": "3000 PPI" },
+        { "label": "Processed Image", "value": "500 PPI" },
+        { "label": "FPS", "value": "14 Hz" },
+        { "label": "Light Source", "value": "LED Azul" },
+        { "label": "Interface", "value": "USB-C 3.0 Superspeed" },
+        { "label": "Dimensions", "value": "14cm x 5.3cm x 6cm" },
+        { "label": "Weight", "value": "146g" },
+        { "label": "Compatibility", "value": "Windows 10, 11 e Linux" }
+      ],
+      "labels": {
+        "Sensor Resolution": "Resolução do Sensor",
+        "Processed Image": "Imagem Processada",
+        "FPS": "FPS",
+        "Light Source": "Fonte de Luz",
+        "Interface": "Interface",
+        "Dimensions": "Dimensões",
+        "Weight": "Peso",
+        "Compatibility": "Compatibilidade"
+      }
+    },
+    "cta": {
+  "title": "Pronto para inovar com biometria infantil?",
+  "description": "Entre em contato e descubra como o Synolo® Neo pode transformar a identificação civil.",
+  "buttonText": "Fale Conosco"
+},
+    "hero": {
+      "title": "Synolo® Neo",
+      "subtitle": "Biometria total desde o nascimento",
+      "description": "Solução de identificação biométrica para recém-nascidos e crianças pequenas, com scanner sem contato, alta resolução e algoritmos avançados. Evite trocas de bebês e garanta a identidade civil desde o nascimento."
+    },
+    "features": [
+      {
+        "icon": "Fingerprint",
+        "title": "Captura Sem Contato",
+        "text": "Elimina distorções comuns encontradas em scanners de contato, especialmente útil para recém-nascidos e crianças pequenas."
+      },
+      {
+        "icon": "Cpu",
+        "title": "Processamento de Imagem",
+        "text": "Corrige efeitos relacionados à idade, permitindo correspondência desde a infância até a vida adulta."
+      },
+      {
+        "icon": "Camera",
+        "title": "Alta Resolução",
+        "text": "Scanner com 3000 PPI nativo e imagem processada em 500 PPI para compatibilidade com qualquer ABIS."
+      },
+      {
+        "icon": "MousePointerClick",
+        "title": "Design Ergonômico",
+        "text": "Uso com uma mão e tampas magnéticas adaptáveis a qualquer dedo ou idade."
+      },
+      {
+        "icon": "Package",
+        "title": "Múltiplos Casos de Uso",
+        "text": "Captura de impressões digitais de bebês, crianças, adultos e palmas."
+      }
+    ]
+  },
+  "innovation": {
+    "title": "Tecnologia Synolo®",
+    "topics": [
+      "O Synolo® Neo incorpora tecnologia de imagem patenteada que combina o melhor dos leitores de impressão digital com e sem contato, garantindo imagens da mais alta qualidade até mesmo dos menores dedos de recém-nascidos.",
+      "Combinado com óptica de alta resolução e algoritmos proprietários de processamento de imagem e correção por idade, o Synolo® Neo é a única solução cientificamente comprovada para permitir correspondência 1:N durante toda a vida, desde o nascimento até a idade adulta."
+    ]
+  },
+  "nature": {
+    "featuredIn": "Destaque na",
+    "publication": "Nature Scientific Reports",
+    "description": "Nossa tecnologia Synolo® Neo foi destacada em uma publicação da revista científica Nature, reforçando sua eficácia na identificação biométrica de recém-nascidos durante a vacinação e atendimento hospitalar.",
+    "button": "Ver Publicação",
+    "totalSubjects": "Total de Participantes",
+    "newbornsEnrolled": "Recém-nascidos Inscritos",
+    "tarNewborns": "TAR Recém-nascidos",
+    "tar4plus": "TAR 4+ Dias",
+    "tarNewbornsLabel": "TAR Recém-nascidos (%)",
+    "tar4plusLabel": "TAR 4+ Dias (%)",
+    "other": "Outros"
+  },
+  "timeline": [
+  {
+    "id": "grant",
+    "ano": "2017",
+    "titulo": "Concessão da Fundação Gates",
+    "conteudo": "Uma concessão de $3 milhões concedida à UC San Diego deu início a tudo. A Fundação Gates convidou o Dr. Eliah Aronoff-Spencer para liderar um projeto para determinar se — e como — recém-nascidos e bebês poderiam ser identificados para a aplicação de vacinas usando biometria.",
+    "imagem": "img2017"
+  },
+  {
+    "id": "poc-study",
+    "ano": "2019",
+    "titulo": "Estudo POC UCSD/Gates",
+    "conteudo": "O estudo piloto liderado pela equipe da UCSD validou que um novo dispositivo de impressão digital sem contato e alta resolução (o 'Panda'), combinado com algoritmos inovadores de processamento de imagem, poderia identificar com sucesso 500 recém-nascidos e bebês em ambiente hospitalar.",
+    "imagem": "img2019"
+  },
+  {
+    "id": "synolo-formed",
+    "ano": "2021",
+    "titulo": "Fundação da Synolo® Biometrics",
+    "conteudo": "A Synolo® Biometrics foi formada por membros-chave da equipe da UCSD e empreendedores experientes para comercializar a tecnologia. O financiamento foi fornecido pelo grupo de investidores anjo BioPacific.",
+    "imagem": "synologo"
+  },
+  {
+    "id": "neo-launched",
+    "ano": "2022",
+    "titulo": "Lançamento do Synolo® Neo",
+    "conteudo": [
+      "Ergonomia e usabilidade aprimoradas",
+      "Processamento de imagem em tempo real versus offline",
+      "Rodas de ajuste de abertura intercambiáveis",
+      "Tecnologia de imagem otimizada com algoritmos proprietários de correção por idade",
+      "Fabricação e montagem simplificadas"
+    ],
+    "imagem": "equipment"
+  },
+  {
+    "id": "citer-study",
+    "ano": "2022",
+    "titulo": "Estudo CITeR/NSF iniciado",
+    "conteudo": [
+      "Estudo POC em hospitais, clínicas e escolas de Nova York",
+      "Aproximadamente 300 bebês e jovens entre nascimento e 15 anos de idade",
+      "Estudo multi-anual conduzido pelo CITeR e pela Clarkson University"
+    ],
+    "imagem": "img2022"
+  },
+  {
+    "id": "first-poc",
+    "ano": "2023",
+    "titulo": "Primeiro POC Comercial",
+    "conteudo": [
+      "NEC, uma grande empresa global com 110.000 funcionários e operações em 50 países, anunciou um estudo POC usando o Synolo® Neo",
+      "Estudo de curto prazo (1-2 meses) a ser conduzido em um grande hospital na América do Sul",
+      "Coleta de impressões digitais de aproximadamente 500 bebês ao nascer e verificação na alta hospitalar"
+    ],
+    "imagem": ""
+  },
+  {
+    "id": "launch-brazil",
+    "ano": "2024",
+    "titulo": "Lançamento do Synolo® no Brasil",
+    "conteudo": [
+      "Synolo® anuncia expansão para a América Latina com o lançamento comercial do leitor de impressões digitais Synolo® Neo no Brasil",
+      "Essa iniciativa reforça o compromisso da empresa em fornecer soluções inovadoras de biometria e identificação civil que garantem a proteção de bebês e crianças desde os primeiros estágios de vida por meio de parceiros locais chave"
+    ],
+    "imagem": "img2024"
+  },
+  {
+    "id": "fbi-certification",
+    "ano": "2025",
+    "titulo": "Certificação FBI",
+    "conteudo": "O Synolo® Neo torna-se o primeiro dispositivo sem contato projetado para biometria de bebês, crianças e adultos a receber a certificação FBI PIV para captura de dedo único.",
+    "imagem": "img2025"
+  }
+],
+  "partnersShowcase": {
+    "title": "Nossos Parceiros",
+    "button": "Seja um parceiro"
+  },
+    "mission": {
+    "innovation": "Inovação",
+    "compassion": "Compaixão",
+    "integrity": "Integridade",
+    "globalImpact": "Impacto Global"
+  },
+  
+  "pressHero": {
+    "title": "Reconhecimento Internacional",
+    "subtitle": "Cobertura da mídia sobre a Synolo® Biometrics e apresentações feitas por membros-chave da equipe em todo o mundo.",
+    "blogLink": "Nosso blog"
+  },
+  
+  "contact": {
+    "title": "Fale com nossa equipe",
+    "description": "Quer saber mais sobre o único sistema clinicamente comprovado para capturar e verificar impressões digitais de recém-nascidos e adultos? Então preencha este formulário e entraremos em contato em breve.",
+    "imageAlt": "Conversa da equipe",
+    "quote": "Não podemos redesenhar os bebês, então precisamos criar uma nova tecnologia. Desde o início, sabíamos que teríamos que repensar esse problema do zero.",
+    "quoteAuthor": "Dr. Eliah Aronoff-Spencer",
+    "quoteRole": "Inventor do Synolo® Neo"
+  },
+  "form": {
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "email": "Email",
+    "phone": "Telefone",
+    "selectSubject": "Selecione o assunto",
+    "subjects": {
+      "partnership": "Parceria",
+      "doubts": "Dúvidas",
+      "getSolution": "Quero a solução",
+      "other": "Outro"
+    },
+    "message": "Sua mensagem...",
+    "sendMessage": "Enviar mensagem"
+  },
+  "errors": {
+    "firstNameRequired": "Nome é obrigatório",
+    "lastNameRequired": "Sobrenome é obrigatório",
+    "emailRequired": "Email é obrigatório",
+    "emailInvalid": "Formato de email inválido",
+    "phoneRequired": "Telefone é obrigatório",
+    "subjectRequired": "Assunto é obrigatório",
+    "messageRequired": "Mensagem é obrigatória"
+  },
+  "toast": {
+    "messageSent": "Mensagem enviada com sucesso!"
+  }
+
+
+
+}

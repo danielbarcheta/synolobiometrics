@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import "react-toastify/dist/ReactToastify.css";
 import holdingHands from "../assets/holding-hands.jpg";
 import synoloLogo from "../assets/Synolo_Complete-BGv2.webp";
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -23,14 +26,14 @@ export default function Contact() {
 
   const validate = () => {
     const newErrors = {};
-    if (!form.firstName.trim()) newErrors.firstName = "First name is required";
-    if (!form.lastName.trim()) newErrors.lastName = "Last name is required";
-    if (!form.email.trim()) newErrors.email = "Email is required";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      newErrors.email = "Invalid email format";
-    if (!form.phone.trim()) newErrors.phone = "Phone is required";
-    if (!form.subject.trim()) newErrors.subject = "Subject is required";
-    if (!form.message.trim()) newErrors.message = "Message is required";
+    if (!form.firstName.trim()) newErrors.firstName = t("errors.firstNameRequired");
+    if (!form.lastName.trim()) newErrors.lastName = t("errors.lastNameRequired");
+    if (!form.email.trim()) newErrors.email = t("errors.emailRequired");
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+      newErrors.email = t("errors.emailInvalid");
+    if (!form.phone.trim()) newErrors.phone = t("errors.phoneRequired");
+    if (!form.subject.trim()) newErrors.subject = t("errors.subjectRequired");
+    if (!form.message.trim()) newErrors.message = t("errors.messageRequired");
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -39,7 +42,7 @@ export default function Contact() {
     e.preventDefault();
     if (validate()) {
       console.log(form);
-      toast.success("Message sent successfully!", {
+      toast.success(t("toast.messageSent"), {
         position: "top-center",
         autoClose: 3000,
       });
@@ -69,7 +72,7 @@ export default function Contact() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-3xl font-bold text-slate-800 mb-2"
         >
-          Chat to our team
+          {t("contact.title")}
         </motion.h1>
 
         <motion.p
@@ -78,7 +81,7 @@ export default function Contact() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-gray-500 text-sm mb-10"
         >
-          Want to learn more about the only clinically proven system to accurately capture and verify newborn and adult fingerprints? Then complete this form and we'll get back to you shortly.
+          {t("contact.description")}
         </motion.p>
 
         <motion.form
@@ -100,7 +103,7 @@ export default function Contact() {
               <input
                 type="text"
                 name="firstName"
-                placeholder="First Name"
+                placeholder={t("form.firstName")}
                 value={form.firstName}
                 onChange={handleChange}
                 className="w-full border-b border-gray-300 bg-transparent py-2 placeholder-gray-600 focus:outline-none focus:border-black"
@@ -113,7 +116,7 @@ export default function Contact() {
               <input
                 type="text"
                 name="lastName"
-                placeholder="Last Name"
+                placeholder={t("form.lastName")}
                 value={form.lastName}
                 onChange={handleChange}
                 className="w-full border-b border-gray-300 bg-transparent py-2 placeholder-gray-600 focus:outline-none focus:border-black"
@@ -128,24 +131,28 @@ export default function Contact() {
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder={t("form.email")}
               value={form.email}
               onChange={handleChange}
               className="w-full border-b border-gray-300 bg-transparent py-2 placeholder-gray-600 focus:outline-none focus:border-black"
             />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email}</p>
+            )}
           </motion.div>
 
           <motion.div variants={fadeSlide}>
             <input
               type="tel"
               name="phone"
-              placeholder="Phone"
+              placeholder={t("form.phone")}
               value={form.phone}
               onChange={handleChange}
               className="w-full border-b border-gray-300 bg-transparent py-2 placeholder-gray-600 focus:outline-none focus:border-black"
             />
-            {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone}</p>
+            )}
           </motion.div>
 
           <motion.div variants={fadeSlide}>
@@ -155,11 +162,11 @@ export default function Contact() {
               onChange={handleChange}
               className="w-full border-b border-gray-300 bg-transparent py-2 text-gray-600 focus:outline-none focus:border-black"
             >
-              <option value="">Select subject</option>
-              <option value="Partnership">Partnership</option>
-              <option value="Doubts">Doubts</option>
-              <option value="Get the solution">Get the solution</option>
-              <option value="Other">Other</option>
+              <option value="">{t("form.selectSubject")}</option>
+              <option value="Partnership">{t("form.subjects.partnership")}</option>
+              <option value="Doubts">{t("form.subjects.doubts")}</option>
+              <option value="Get the solution">{t("form.subjects.getSolution")}</option>
+              <option value="Other">{t("form.subjects.other")}</option>
             </select>
             {errors.subject && (
               <p className="text-red-500 text-sm">{errors.subject}</p>
@@ -169,7 +176,7 @@ export default function Contact() {
           <motion.div variants={fadeSlide}>
             <textarea
               name="message"
-              placeholder="Your message..."
+              placeholder={t("form.message")}
               rows="5"
               value={form.message}
               onChange={handleChange}
@@ -185,7 +192,7 @@ export default function Contact() {
             className="w-full mt-3 border border-gray-500 text-gray-900 bg-transparent py-3 px-6 rounded-md font-medium transition-colors duration-300 hover:border-[#7debd0]"
             variants={fadeSlide}
           >
-            Send message
+            {t("form.sendMessage")}
           </motion.button>
         </motion.form>
       </motion.div>
@@ -199,7 +206,7 @@ export default function Contact() {
         <div className="relative w-full h-screen overflow-hidden">
           <img
             src={holdingHands}
-            alt="Team Chat"
+            alt={t("contact.imageAlt")}
             className="object-cover w-full h-full"
           />
           <div className="absolute inset-0 bg-black/40 z-10"></div>
@@ -211,7 +218,7 @@ export default function Contact() {
             className="absolute bottom-64 left-8 right-8 text-left px-6 z-20 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] leading-snug"
             style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 500, fontSize: "2.0rem" }}
           >
-            "We can't redesign infants, so we have to design new technology. From day one, we knew we had to rethink this problem from the ground up."
+            {`"${t("contact.quote")}"`}
           </motion.div>
 
           <motion.div
@@ -221,8 +228,8 @@ export default function Contact() {
             className="absolute bottom-44 left-8 right-8 px-6 z-20 text-white"
             style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 300, fontSize: "1.25rem", lineHeight: 1.1 }}
           >
-            <p>Dr. Eliah Aronoff-Spencer</p>
-            <p>Inventor of the Synolo® Neo</p>
+            <p>{t("contact.quoteAuthor")}</p>
+            <p>{t("contact.quoteRole")}</p>
           </motion.div>
 
           <motion.div

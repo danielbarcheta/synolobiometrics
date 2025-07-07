@@ -1,6 +1,7 @@
 import { MdArrowForward } from "react-icons/md";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import scroll1 from "../assets/partner1.png";
 import scroll2 from "../assets/partner2.png";
@@ -17,6 +18,8 @@ const partners = [
 ];
 
 export default function PartnersShowcase() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full bg-white pt-20 px-6 mb-10">
       <div className="max-w-6xl mx-auto">
@@ -24,7 +27,7 @@ export default function PartnersShowcase() {
           className="text-3xl sm:text-4xl text-center mb-12 text-gray-700"
           style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 600 }}
         >
-          Our Global Partners
+          {t("partnersShowcase.title")}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0.5">
@@ -58,7 +61,7 @@ export default function PartnersShowcase() {
             className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 px-4 py-2 rounded-full transition-colors hover:text-[#33cfab]"
             style={{ border: "none", backgroundColor: "transparent" }}
           >
-            Become a partner <MdArrowForward className="text-base" />
+            {t("partnersShowcase.button")} <MdArrowForward className="text-base" />
           </Link>
         </motion.div>
       </div>

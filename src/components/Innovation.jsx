@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -7,6 +8,7 @@ import baby2 from '../assets/finger2.png';
 import icon from '../assets/icon-synolo.png';
 
 const Innovation = () => {
+  const { t } = useTranslation();
   const images = [baby1, baby2];
   const [currentImage, setCurrentImage] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
@@ -31,10 +33,7 @@ const Innovation = () => {
     clearInterval(intervalRef.current);
   };
 
-  const topics = [
-    "The Synolo® Neo incorporates patented imaging technology that utilizes the best of both contact and non-contact fingerprint readers to ensure the highest quality images of even the smallest newborn fingers. Our technology prevents the distortion caused by compressing a soft, infant finger against a glass platen, while ensuring the finger is positioned precisely to optimize image quality.",
-    "Combined with Synolo's high resolution optics and proprietary image processing and age-correction algorithms, the Synolo® Neo not only ensures accurate infant fingerprint capture and identification but is also the only scientifically-proven solution to provide life-long 1:N matching as the baby grows to become a productive adult citizen."
-  ];
+  const topics = t("innovation.topics", { returnObjects: true });
 
   return (
     <section className="w-full px-6 md:px-20 py-24 bg-white">
@@ -70,16 +69,14 @@ const Innovation = () => {
           <div className="flex items-center gap-3">
             <img src={icon} alt="Synolo Icon" className="w-8 h-8" />
             <h2 className="text-[clamp(1.6rem,3vw,2rem)] font-extrabold text-gray-900 leading-tight">
-              Synolo® Technology
+              {t("innovation.title")}
             </h2>
           </div>
           <div className="flex flex-col gap-5">
-            {topics.map((topic, idx) => (
-              <div key={idx} className="flex items-start gap-3">
-                <p className="text-[clamp(0.9rem,1.6vw,1rem)] font-semibold text-gray-700 leading-relaxed">
-                  {topic}
-                </p>
-              </div>
+            {topics.map((text, idx) => (
+              <p key={idx} className="text-[clamp(0.9rem,1.6vw,1rem)] font-semibold text-gray-700 leading-relaxed">
+                {text}
+              </p>
             ))}
           </div>
         </div>

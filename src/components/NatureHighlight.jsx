@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
   PieChart,
@@ -9,28 +10,30 @@ import {
 } from "recharts";
 import natureLogo from "../assets/nature-logo.png";
 
-const pieData = [
-  {
-    id: "TAR Newborns",
-    data: [
-      { name: "TAR Newborns", value: 87 },
-      { name: "Other", value: 13 },
-    ],
-    label: "TAR Newborns (%)",
-  },
-  {
-    id: "TAR 4+ days",
-    data: [
-      { name: "TAR 4+ days", value: 98 },
-      { name: "Other", value: 2 },
-    ],
-    label: "TAR 4+ Days (%)",
-  },
-];
-
 const COLORS = ["#33cfabd5", "#d3f0e9"];
 
 const NatureHighlight = () => {
+  const { t } = useTranslation();
+
+  const pieData = [
+    {
+      id: "TAR Newborns",
+      data: [
+        { name: t("nature.tarNewborns"), value: 87 },
+        { name: t("nature.other"), value: 13 },
+      ],
+      label: t("nature.tarNewbornsLabel"),
+    },
+    {
+      id: "TAR 4+ days",
+      data: [
+        { name: t("nature.tar4plus"), value: 98 },
+        { name: t("nature.other"), value: 2 },
+      ],
+      label: t("nature.tar4plusLabel"),
+    },
+  ];
+
   return (
     <section className="w-full bg-white py-16 px-6 md:px-20">
       <motion.div
@@ -46,11 +49,11 @@ const NatureHighlight = () => {
           className="h-12 md:h-16 mx-auto mb-4"
         />
         <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-gray-800">
-          Featured in{" "}
-          <span style={{ color: "#33cfabd5" }}>Nature Scientific Reports</span>
+          {t("nature.featuredIn")}{" "}
+          <span style={{ color: "#33cfabd5" }}>{t("nature.publication")}</span>
         </h2>
         <p className="text-base text-gray-600 max-w-3xl mx-auto mb-6">
-          Our Synolo® Neo technology was highlighted in a publication by the scientific journal <strong>Nature</strong>, reinforcing its effectiveness in biometric identification of newborns during vaccination and hospital care.
+          {t("nature.description")}
         </p>
         <a
           href="https://www.nature.com/articles/s41598-022-25986-6"
@@ -58,7 +61,7 @@ const NatureHighlight = () => {
           rel="noopener noreferrer"
           className="inline-block bg-[#33cfabd5] text-white px-6 py-3 rounded-md font-medium hover:brightness-90 transition duration-300"
         >
-          View Publication
+          {t("nature.button")}
         </a>
       </motion.div>
 
@@ -70,16 +73,12 @@ const NatureHighlight = () => {
         className="max-w-6xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 items-center"
       >
         <div className="text-center">
-          <h3 className="mb-3 font-semibold text-gray-800">Total Subjects</h3>
-          <p className="text-7xl font-bold" style={{ color: "#33cfabd5" }}>
-            494
-          </p>
+          <h3 className="mb-3 font-semibold text-gray-800">{t("nature.totalSubjects")}</h3>
+          <p className="text-7xl font-bold" style={{ color: "#33cfabd5" }}>494</p>
         </div>
         <div className="text-center">
-          <h3 className="mb-3 font-semibold text-gray-800">Newborns Enrolled</h3>
-          <p className="text-7xl font-bold" style={{ color: "#33cfabd5" }}>
-            297
-          </p>
+          <h3 className="mb-3 font-semibold text-gray-800">{t("nature.newbornsEnrolled")}</h3>
+          <p className="text-7xl font-bold" style={{ color: "#33cfabd5" }}>297</p>
         </div>
 
         {pieData.map(({ id, data, label }) => (
@@ -103,11 +102,6 @@ const NatureHighlight = () => {
                       ? `${(percent * 100).toFixed(0)}%`
                       : null
                   }
-                  labelStyle={{
-                    fontWeight: "bold",
-                    fontSize: "18px",
-                    fill: "#333",
-                  }}
                 >
                   {data.map((entry, index) => (
                     <Cell
@@ -118,7 +112,7 @@ const NatureHighlight = () => {
                 </Pie>
                 <Tooltip
                   formatter={(value, name) =>
-                    name === "Other" ? null : [value, name]
+                    name === t("nature.other") ? null : [value, name]
                   }
                 />
               </PieChart>

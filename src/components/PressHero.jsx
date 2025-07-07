@@ -6,8 +6,10 @@ import { GiEarthAmerica } from "react-icons/gi";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import PressHeroImg from "../assets/PressHero.jpg";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function PressHero() {
+  const { t } = useTranslation();
   const carouselRef = useRef(null);
   const sectionRef = useRef(null);
 
@@ -74,7 +76,7 @@ export default function PressHero() {
                   fontFamily: "'Space Grotesk', sans-serif",
                 }}
               >
-                International Recognition
+                {t("pressHero.title")}
               </h1>
             </div>
 
@@ -87,7 +89,7 @@ export default function PressHero() {
                   color: "white",
                 }}
               >
-                Media coverage of Synolo<sup>®</sup> Biometrics and presentations given by key team members across the globe.
+                {t("pressHero.subtitle")}
               </p>
             </div>
 
@@ -95,7 +97,9 @@ export default function PressHero() {
               onClick={scrollToBottom}
               className="flex items-center gap-2 text-white mt-8 ml-8 hover:underline focus:outline-none"
             >
-              <span className="text-base font-medium">Our blog</span>
+              <span className="text-base font-medium">
+                {t("pressHero.blogLink")}
+              </span>
               <HiArrowNarrowRight size={20} />
             </button>
           </motion.div>
@@ -164,67 +168,6 @@ export default function PressHero() {
           </div>
         </motion.div>
       </motion.div>
-
-      <style jsx>{`
-        @media (max-width: 1024px) {
-          .gap-[400px] {
-            gap: 4rem;
-          }
-          .h-[80vh] {
-            height: auto !important;
-          }
-          .pt-40 {
-            padding-top: 6rem;
-          }
-          .mt-[100px] {
-            margin-top: 2.5rem !important;
-          }
-        }
-        @media (max-width: 768px) {
-          .gap-[400px] {
-            gap: 2rem !important;
-          }
-          .pt-40 {
-            padding-top: 3rem !important;
-          }
-          .ml-8 {
-            margin-left: 1rem !important;
-          }
-          .lg\\:w-\\[50\\%\\] {
-            width: 100% !important;
-          }
-          .lg\\:w-\\[45\\%\\] {
-            width: 100% !important;
-          }
-          .lg\\:flex {
-            display: none !important;
-          }
-        }
-        @media (max-width: 480px) {
-          .font-bold {
-            font-size: 1.5rem !important;
-          }
-          .text-base {
-            font-size: 0.875rem !important;
-          }
-          .h-[100px] {
-            height: 80px !important;
-          }
-          .w-1\\/2 {
-            width: 100% !important;
-          }
-          .px-4 {
-            padding-left: 0.75rem !important;
-            padding-right: 0.75rem !important;
-          }
-          .ml-4 {
-            margin-left: 0.5rem !important;
-          }
-          .ml-8 {
-            margin-left: 0.5rem !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

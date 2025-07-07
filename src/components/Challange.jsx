@@ -1,29 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-const failurePoints = [
-  {
-    title: "Standard 500ppi Fails",
-    description:
-      "Infant prints are tiny and require highly sophisticated imaging techniques; high-resolution alone is not enough.",
-  },
-  {
-    title: "Standard Contact Readers Fails",
-    description:
-      "Infant fingers are easily deformable and fingerprints are distorted by contact pressure, obscuring details.",
-  },
-  {
-    title: "Standard Non-Contact Readers Fails",
-    description:
-      "Infants' behavior make them difficult to position for consistent image quality.",
-  },
-  {
-    title: "Longitudinal Matching Fails",
-    description:
-      "As infants grow to be adults, matching becomes difficult or impossible without accommodating age-related changes.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ChevronRightIcon = () => (
   <svg
@@ -43,6 +21,11 @@ const ChevronRightIcon = () => (
 );
 
 const Challenge = () => {
+  const { t } = useTranslation();
+
+  // Pega o array de failurePoints do json
+  const failurePoints = t("challenge.failurePoints", { returnObjects: true });
+
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
@@ -52,13 +35,13 @@ const Challenge = () => {
       <h1
         className="font-poppins font-semibold text-gray-900 text-center text-balance text-[clamp(1.4rem,5vw,2.2rem)] leading-tight"
       >
-        The Challenge: Newborn to 8 year old ID Capture
+        {t("challenge.title")}
       </h1>
 
       <p
         className="mt-3 italic text-center text-gray-500 font-medium text-[clamp(0.9rem,1.4vw,1.1rem)] max-w-xl"
       >
-        Why infant print identification is so difficult?
+        {t("challenge.subtitle")}
       </p>
 
       <div
