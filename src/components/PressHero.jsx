@@ -7,6 +7,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import PressHeroImg from "../assets/PressHero.jpg";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function PressHero() {
   const { t } = useTranslation();
@@ -61,19 +62,18 @@ export default function PressHero() {
       >
         <div className="flex flex-col justify-between w-full lg:w-[50%] pt-40 pb-8 self-start lg:mt-12 h-[80vh]">
           <motion.div
+            className="mt-20"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             <div className="flex items-center gap-3 ml-8 mb-2">
-              <GiEarthAmerica color={titleColor} size={28} />
               <h1
                 className="font-normal"
                 style={{
-                  fontWeight: 300,
-                  fontSize: "1.700rem",
-                  color: titleColor,
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily: "'Libertinus Math', serif",
+                  fontSize: "2.3rem",
+                  color: "white",
                 }}
               >
                 {t("pressHero.title")}
@@ -84,24 +84,25 @@ export default function PressHero() {
               <p
                 className="font-bold max-w-5xl"
                 style={{
-                  fontFamily: "'Libertinus Math', serif",
-                  fontSize: "2.15rem",
-                  color: "white",
+                  fontWeight: 300,
+                  fontSize: "1.4rem",
+                  color: titleColor,
+                  fontFamily: "'Space Grotesk', sans-serif",
                 }}
               >
                 {t("pressHero.subtitle")}
               </p>
             </div>
 
-            <button
-              onClick={scrollToBottom}
+            <Link
+              to="/blog"
               className="flex items-center gap-2 text-white mt-8 ml-8 hover:underline focus:outline-none"
             >
               <span className="text-base font-medium">
                 {t("pressHero.blogLink")}
               </span>
               <HiArrowNarrowRight size={20} />
-            </button>
+            </Link>
           </motion.div>
 
           <motion.div
