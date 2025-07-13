@@ -11,6 +11,9 @@ import scroll2 from "../assets/partner2.png";
 import scroll3 from "../assets/partner3.png";
 import scroll4 from "../assets/partner4.svg";
 import scroll5 from "../assets/partner5.png";
+import scroll6 from "../assets/partner6.png";
+import scroll7 from "../assets/scroll7.png";
+import scroll8 from "../assets/scroll8.png";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -24,7 +27,7 @@ const Hero = () => {
     });
   }, []);
 
-  const scrollImages = [scroll1, scroll2, scroll3, scroll4, scroll5];
+  const scrollImages = [scroll1, scroll2, scroll3, scroll4, scroll5, scroll6, scroll7, scroll8];
 
   return (
     <section

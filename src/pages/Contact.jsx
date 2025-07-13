@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import "react-toastify/dist/ReactToastify.css";
 import holdingHands from "../assets/holding-hands.jpg";
 import synoloLogo from "../assets/Synolo_Complete-BGv2.webp";
+import { Navbar } from "../components";
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -58,6 +59,8 @@ export default function Contact() {
   };
 
   return (
+    <>
+        <Navbar  />
     <div className="h-screen flex bg-white pt-16 md:pt-0">
       <ToastContainer />
       <motion.div
@@ -258,6 +261,7 @@ export default function Contact() {
         </div>
       </motion.div>
     </div>
+    </>
   );
 }
 

@@ -4,15 +4,18 @@ import Solution from "../components/Solution";
 import Innovation from "../components/Innovation";
 import styles from "../style";
 import NatureHighlight from "../components/NatureHighlight";
-import ContactFloatingButton from "../components/ContactFloatingButton";
 
 const Home = () => {
   return (
     <div className="bg-primary-gradient w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter} relative z-20`}>
         <div className={`${styles.boxWidth}`}>
-<Navbar isLogoWhite={true} />
         </div>
+      </div>
+
+            <div className="relative z-20">
+<Navbar />
+
       </div>
 
       <div className="relative">
@@ -25,7 +28,6 @@ const Home = () => {
       <NatureHighlight/>
       <Footer />
       
-  <ContactFloatingButton />
     </div>
   );
 };

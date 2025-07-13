@@ -39,8 +39,8 @@ export function SpecsSection({ specsNeo }) {
   }, []);
 
   return (
-    <section className="flex flex-col lg:flex-row bg-white px-6 lg:px-20 py-16 font-spaceGrotesk gap-16 max-w-screen-xl mx-auto">
-      <div className="w-full lg:w-1/2 flex flex-col items-center justify-start gap-6 relative">
+    <section className="flex flex-col lg:flex-row bg-white px-6 lg:px-20 py-16 font-spaceGrotesk gap-16 max-w-screen-2xl mx-auto">
+      <div className="flex-1 flex flex-col items-center justify-start gap-6 relative">
         <div className="relative w-full h-[320px] flex items-center justify-center">
           {images.map((img, idx) => (
             <AnimatePresence key={idx}>
@@ -70,7 +70,7 @@ export function SpecsSection({ specsNeo }) {
         </div>
       </div>
 
-      <div className="w-full lg:w-1/2 flex flex-col">
+      <div className="flex-1 flex flex-col">
         <h2 className="text-3xl font-bold text-slate-800 mb-10">
           {specsNeo.subtitle}
         </h2>

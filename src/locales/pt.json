@@ -54,6 +54,25 @@
     ],
     "button": "Ver Mais"
   },
+  "articles": {
+  "title": "Artigos",
+  "subtitle": "Aprofunde seu entendimento sobre como o Synolo Neo opera na coleta de digitais de recém-nascidos.",
+  "items": [
+    {
+      "title": "Reconhecimento biométrico de recém-nascidos e bebês por impressão digital sem contato: lições aprendidas",
+      "link": "https://gatesopenresearch.org/articles/3-1477/v2"
+    },
+    {
+      "title": "Reconhecimento biométrico de recém-nascidos e crianças pequenas para vacinação e cuidados de saúde: um estudo clínico prospectivo não randomizado",
+      "link": "https://www.nature.com/articles/s41598-022-25986-6"
+    },
+    {
+      "title": "Estudo longitudinal sobre reconhecimento de impressão digital em bebês, crianças pequenas e crianças",
+      "link": "https://www.preprints.org/manuscript/202405.0224/v1"
+    }
+  ]
+},
+
   "productHighlights": {
     "specsNeo": {
       "title": "O Synolo Neo",

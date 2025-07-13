@@ -8,6 +8,9 @@ import scroll2 from "../assets/partner2.png";
 import scroll3 from "../assets/partner3.png";
 import scroll4 from "../assets/partner4.svg";
 import scroll5 from "../assets/partner5.png";
+import scroll6 from "../assets/partner6.png";
+import scroll7 from "../assets/scroll7.png";
+import scroll8 from "../assets/scroll8.png";
 
 const partners = [
   { name: "Partner 1", logo: scroll1 },
@@ -15,6 +18,9 @@ const partners = [
   { name: "Partner 3", logo: scroll3 },
   { name: "Partner 4", logo: scroll4 },
   { name: "Partner 5", logo: scroll5 },
+  { name: "Partner 6", logo: scroll6 },
+  { name: "Partner 7", logo: scroll7 },
+  { name: "Partner 8", logo: scroll8 },
 ];
 
 export default function PartnersShowcase() {
@@ -30,7 +36,7 @@ export default function PartnersShowcase() {
           {t("partnersShowcase.title")}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0.5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center">
           {partners.map((partner, idx) => (
             <motion.div
               key={idx}
@@ -38,7 +44,7 @@ export default function PartnersShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center h-[80px]"
+              className="flex items-center justify-center h-[80px] w-full"
             >
               <img
                 src={partner.logo}

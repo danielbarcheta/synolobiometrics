@@ -54,6 +54,25 @@
     ],
     "button": "View More"
   },
+  "articles": {
+  "title": "Articles",
+  "subtitle": "Deepen your understanding of how Synolo Neo operates in newborn fingerprint collection.",
+  "items": [
+    {
+      "title": "Biometric recognition of newborns and infants by non-contact fingerprinting: lessons learned",
+      "link": "https://gatesopenresearch.org/articles/3-1477/v2"
+    },
+    {
+      "title": "Biometric recognition of newborns and young children for vaccinations and health care: a non-randomized prospective clinical trial",
+      "link": "https://www.nature.com/articles/s41598-022-25986-6"
+    },
+    {
+      "title": "A Longitudinal Study on Fingerprint Recognition in Infants, Toddlers, and Children",
+      "link": "https://www.preprints.org/manuscript/202405.0224/v1"
+    }
+  ]
+},
+
 "productHighlights": {
   "specsNeo": {
     "title": "The Synolo Neo",

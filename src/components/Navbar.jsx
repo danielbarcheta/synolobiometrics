@@ -4,12 +4,13 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { logo, iconsynolo } from "../assets";
 import { navLinks } from "../constants";
 import { useTranslation } from "react-i18next";
+import { logowhite } from "../assets";
 
 const brazilFlag = "https://flagcdn.com/w20/br.png";
 const usaFlag = "https://flagcdn.com/w20/us.png";
 const spainFlag = "https://flagcdn.com/w20/es.png";
 
-const Navbar = ({ isContact = false }) => {
+const Navbar = ({ isContact = false, logoWhite = false }) => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [active, setActive] = useState("Home");
@@ -97,7 +98,7 @@ const Navbar = ({ isContact = false }) => {
       {!isContact && (
         <Link to="/" className="fixed top-4 left-8 z-[100]">
           <img
-            src={logo}
+            src={logoWhite ? logowhite : logo}
             alt="logo-big"
             className={`transition-all duration-500 ease-in-out pointer-events-auto
               ${scrolled ? "opacity-0 translate-y-[-20px]" : "opacity-100 translate-y-0"}

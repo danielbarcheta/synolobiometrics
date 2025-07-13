@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import babyabout from "../assets/babyabout.jpg";
+import babyabout from "../assets/babyabout.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -20,7 +20,7 @@ export default function AboutHero() {
         minHeight: "500px",
       }}
     >
-      <div className="bg-black bg-opacity-50 w-full h-full absolute top-0 left-0 z-0" />
+      <div className="bg-black bg-opacity-30 w-full h-full absolute top-0 left-0 z-0" />
 
       <div
         className="relative z-10 w-full px-8 md:px-16 max-w-7xl mx-auto"

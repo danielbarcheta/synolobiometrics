@@ -19,6 +19,25 @@
         "checkArticles": "Consulta los Artículos",
     "details": "Detalles"
   },
+  "articles": {
+  "title": "Artículos",
+  "subtitle": "Profundice su comprensión sobre cómo Synolo Neo opera en la recolección de huellas dactilares de recién nacidos.",
+  "items": [
+    {
+      "title": "Reconocimiento biométrico de recién nacidos y bebés mediante impresión dactilar sin contacto: lecciones aprendidas",
+      "link": "https://gatesopenresearch.org/articles/3-1477/v2"
+    },
+    {
+      "title": "Reconocimiento biométrico de recién nacidos y niños pequeños para vacunación y atención médica: un ensayo clínico prospectivo no aleatorizado",
+      "link": "https://www.nature.com/articles/s41598-022-25986-6"
+    },
+    {
+      "title": "Estudio longitudinal sobre reconocimiento de huellas dactilares en bebés, niños pequeños y niños",
+      "link": "https://www.preprints.org/manuscript/202405.0224/v1"
+    }
+  ]
+},
+
   "challenge": {
     "title": "El desafío: Captura de identificación de recién nacidos a niños de 8 años",
     "subtitle": "¿Por qué es tan difícil la identificación de huellas infantiles?",
