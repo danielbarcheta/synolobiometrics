@@ -23,7 +23,6 @@ const ChevronRightIcon = () => (
 const Challenge = () => {
   const { t } = useTranslation();
 
-  // Pega o array de failurePoints do json
   const failurePoints = t("challenge.failurePoints", { returnObjects: true });
 
   useEffect(() => {
@@ -31,9 +30,24 @@ const Challenge = () => {
   }, []);
 
   return (
-    <section className="flex flex-col items-center px-6 md:px-20 py-24 bg-transparent max-w-full">
+    <section className="flex flex-col items-center px-6 md:px-20 pt-16 pb-6 bg-transparent max-w-full relative">
+      
+      <div
+        style={{
+          position: "absolute",
+          top: "40px",          // linha mais para baixo, próxima do título
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "80px",
+          height: "1px",
+          backgroundColor: "rgba(10, 25, 47, 0.6)",
+          borderRadius: "0.5px",
+        }}
+      />
+
       <h1
-        className="font-poppins font-semibold text-gray-900 text-center text-balance text-[clamp(1.4rem,5vw,2.2rem)] leading-tight"
+        className="font-poppins font-semibold text-center text-balance text-[clamp(1.4rem,5vw,2.2rem)] leading-tight"
+        style={{ color: "#0b1f2a" }}
       >
         {t("challenge.title")}
       </h1>

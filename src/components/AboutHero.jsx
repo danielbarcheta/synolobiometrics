@@ -33,15 +33,19 @@ export default function AboutHero() {
         }}
       >
         <h1
-          className="text-white text-3xl md:text-4xl max-w-3xl"
+          className="text-white text-3xl md:text-[2.5rem] max-w-3xl"
           style={{ fontWeight: 600, marginBottom: "1rem" }}
         >
           {t("aboutHero.title")}
         </h1>
 
         <div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white text-sm font-medium leading-relaxed"
-          style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 100 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white font-medium leading-relaxed"
+          style={{
+            fontFamily: "'Kanit', sans-serif",
+            fontWeight: 100,
+            fontSize: "1.05rem",
+          }}
         >
           <p>{t("aboutHero.paragraph1")}</p>
           <p>{t("aboutHero.paragraph2")}</p>

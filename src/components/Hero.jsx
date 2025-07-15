@@ -6,15 +6,6 @@ import "aos/dist/aos.css";
 import babyImage from "../assets/baby.png";
 import { MdOutlineCheckCircle } from "react-icons/md";
 
-import scroll1 from "../assets/partner1.png";
-import scroll2 from "../assets/partner2.png";
-import scroll3 from "../assets/partner3.png";
-import scroll4 from "../assets/partner4.svg";
-import scroll5 from "../assets/partner5.png";
-import scroll6 from "../assets/partner6.png";
-import scroll7 from "../assets/scroll7.png";
-import scroll8 from "../assets/scroll8.png";
-
 const Hero = () => {
   const { t } = useTranslation();
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -26,8 +17,6 @@ const Hero = () => {
       easing: "ease-out-cubic",
     });
   }, []);
-
-  const scrollImages = [scroll1, scroll2, scroll3, scroll4, scroll5, scroll6, scroll7, scroll8];
 
   return (
     <section
@@ -89,17 +78,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-[20] w-full max-w-[800px] px-4 h-auto flex justify-center items-center flex-wrap gap-4">
-        {scrollImages.map((img, idx) => (
-          <img
-            key={idx}
-            src={img}
-            alt={`partner-${idx}`}
-            className="h-[24px] sm:h-[28px] w-auto object-contain opacity-90 hover:opacity-100 transition"
-          />
-        ))}
       </div>
     </section>
   );

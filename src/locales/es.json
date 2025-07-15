@@ -19,6 +19,10 @@
         "checkArticles": "Consulta los Artículos",
     "details": "Detalles"
   },
+    "partnersCarousel": {
+    "commercialPartners": "Socios Comerciales",
+    "institutionalPartners": "Socios Institucionales"
+  },
   "articles": {
   "title": "Artículos",
   "subtitle": "Profundice su comprensión sobre cómo Synolo Neo opera en la recolección de huellas dactilares de recién nacidos.",

@@ -11,6 +11,11 @@
     "paragraph1": "Synolo® Biometrics was created to commercialize the infant biometrics collection technology developed at UC San Diego with funding from the Gates Foundation. This technology was clinically proven in a large joint study performed in a major hospital in Mexico, utilizing prototype devices and offline image processing.",
     "paragraph2": "Since forming Synolo® in 2021, the original \"Panda\" prototype has been transformed into a fully commercialized unit with proprietary, real-time, high resolution image processing, ergonomic design, and a robust SDK for OEM integration that is already successfully deployed in the field in the US and Brazil."
   },
+  "partnersCarousel": {
+  "commercialPartners": "Commercial Partners",
+  "institutionalPartners": "Institutional Partners"
+},
+
   "hero": {
     "titleLine1": "Total",
     "highlight": "biometrics",

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import neohand from "../assets/neohand.png";
 import { useTranslation } from "react-i18next";
+import { MdOutlineCheckCircle } from "react-icons/md"; // Ícone
 
 export function HeroSection({ hero }) {
   const { t } = useTranslation();
@@ -62,31 +63,12 @@ export function HeroSection({ hero }) {
             {hero.description}
           </p>
 
-          <a
-            href="https://gatesopenresearch.org/articles/3-1477/v2"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-20 inline-flex items-center space-x-3 cursor-pointer group"
-          >
-            <span
-              className="text-black font-bold text-lg md:text-xl hover:underline"
-              style={{ lineHeight: 1.2 }}
-            >
-              {t("hero.checkArticles")}
-            </span>
-            <svg
-              className="w-6 h-6 text-black transition-transform group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </a>
+          {/* ✅ TEXTO + ÍCONE acima do link */}
+          <div className="mt-10 flex items-center justify-end gap-2 text-gray-800 font-semibold text-base md:text-lg">
+            <MdOutlineCheckCircle className="text-[#5ce6b1db] text-[1.8rem]" />
+            <span>{t("hero.certification")}</span>
+          </div>
+
         </motion.div>
       </div>
 

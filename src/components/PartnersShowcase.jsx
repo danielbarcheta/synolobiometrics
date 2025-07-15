@@ -12,51 +12,58 @@ import scroll6 from "../assets/partner6.png";
 import scroll7 from "../assets/scroll7.png";
 import scroll8 from "../assets/scroll8.png";
 
-const partners = [
-  { name: "Partner 1", logo: scroll1 },
-  { name: "Partner 2", logo: scroll2 },
-  { name: "Partner 3", logo: scroll3 },
-  { name: "Partner 4", logo: scroll4 },
-  { name: "Partner 5", logo: scroll5 },
-  { name: "Partner 6", logo: scroll6 },
-  { name: "Partner 7", logo: scroll7 },
-  { name: "Partner 8", logo: scroll8 },
-];
+const topRow = [scroll6, scroll7, scroll8];
+const bottomRow = [scroll1, scroll2, scroll3, scroll4, scroll5];
 
 export default function PartnersShowcase() {
   const { t } = useTranslation();
 
   return (
     <section className="w-full bg-white pt-20 px-6 mb-10">
-      <div className="max-w-6xl mx-auto">
-        <h2
-          className="text-3xl sm:text-4xl text-center mb-12 text-gray-700"
-          style={{ fontFamily: "'Kanit', sans-serif", fontWeight: 600 }}
-        >
-          {t("partnersShowcase.title")}
-        </h2>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center">
-          {partners.map((partner, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              viewport={{ once: true }}
-              className="flex items-center justify-center h-[80px] w-full"
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="max-h-[40px] max-w-full object-contain"
-              />
-            </motion.div>
-          ))}
+      <div className="w-[90%] mx-auto">
+        <div className="w-full flex flex-col lg:flex-row justify-between gap-10">
+          <div className="flex flex-col items-center w-full lg:w-1/2">
+            <h3 className="text-center text-base font-semibold text-gray-700 mb-3">
+              {t("partnersCarousel.commercialPartners", "Commercial Partners")}
+            </h3>
+            <div className="flex justify-center items-center flex-wrap gap-5">
+              {topRow.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="w-[180px] h-[100px] flex justify-center items-center"
+                >
+                  <img
+                    src={img}
+                    alt={`partner-top-${idx}`}
+                    className="w-full h-full object-contain opacity-90 hover:opacity-100 transition"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col items-center w-full lg:w-1/2">
+            <h3 className="text-center text-base font-semibold text-gray-700 mb-3">
+              {t("partnersCarousel.institutionalPartners", "Institutional Partners")}
+            </h3>
+            <div className="flex justify-center items-center flex-wrap gap-5">
+              {bottomRow.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="w-[140px] h-[70px] flex justify-center items-center"
+                >
+                  <img
+                    src={img}
+                    alt={`partner-bottom-${idx}`}
+                    className="w-full h-full object-contain opacity-90 hover:opacity-100 transition"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <motion.div
-          className="flex justify-center mt-8"
+          className="flex justify-center mt-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}

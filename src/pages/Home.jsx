@@ -1,6 +1,7 @@
 import React from "react";
 import { Hero, Challange, Footer, Navbar } from "../components";
 import Solution from "../components/Solution";
+import PartnersCarousel from "../components/PartnersCarousel";
 import Innovation from "../components/Innovation";
 import styles from "../style";
 import NatureHighlight from "../components/NatureHighlight";
@@ -21,7 +22,7 @@ const Home = () => {
       <div className="relative">
         <Hero />
       </div>
-
+      <PartnersCarousel/>
       <Challange />
       <Solution />
       <Innovation />

@@ -12,9 +12,8 @@ const About = () => {
 
     <Navbar logoWhite={true} />
    <AboutHero/>
-    <PartnersShowcase/>
     <Timeline/>
-
+        <PartnersShowcase/>
    <Testimonials/>
       
    <Footer/>

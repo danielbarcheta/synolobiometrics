@@ -14,7 +14,7 @@
   "hero": {
     "titleLine1": "Biometria",
     "highlight": "total",
-    "titleLine2": "desde o nascimento",
+    "titleLine2": "desde o nascer",
     "certification": "Certificação FBI PIV - Dispositivo de Captura de Dedo Único",
         "checkArticles": "Confira os Artigos",
     "details": "Detalhes"
@@ -72,6 +72,10 @@
     }
   ]
 },
+  "partnersCarousel": {
+    "commercialPartners": "Parceiros Comerciais",
+    "institutionalPartners": "Parceiros Institucionais"
+  },
 
   "productHighlights": {
     "specsNeo": {

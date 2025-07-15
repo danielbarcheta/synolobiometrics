@@ -145,14 +145,6 @@ export const footerLinks = [
     title: "Community",
     links: [
       {
-        name: "Events",
-        link: "https://www.synolo.com/help-center/",
-      },
-      {
-        name: "Suggestions",
-        link: "https://www.synolo.com/suggestions/",
-      },
-      {
         name: "Blog",
         link: "https://www.synolo.com/blog/",
       },

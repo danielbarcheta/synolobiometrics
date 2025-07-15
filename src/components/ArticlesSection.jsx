@@ -5,9 +5,7 @@ import preprints from "../assets/preprints.png";
 
 export default function ArticlesSection() {
   const { t } = useTranslation();
-
   const articles = t("articles.items", { returnObjects: true });
-
   const images = [gatesresearch, nature, preprints];
 
   return (
@@ -16,7 +14,7 @@ export default function ArticlesSection() {
         <h2
           className="font-poppins font-semibold text-center"
           style={{
-            fontSize: "clamp(1.6rem, 5vw, 2.8rem)",
+            fontSize: "clamp(1.4rem, 4vw, 2.2rem)",
             lineHeight: 1.2,
             marginBottom: "0.25rem",
             color: "#000",
