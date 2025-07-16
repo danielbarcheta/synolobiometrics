@@ -19,6 +19,21 @@
         "checkArticles": "Confira os Artigos",
     "details": "Detalhes"
   },
+  "footer": {
+  "columns": {
+    "useful": "Links Úteis",
+    "community": "Comunidade",
+    "partner": "Parceiro"
+  },
+  "links": {
+    "about": "Sobre",
+    "reader": "Leitor de Impressão Digital",
+    "blog": "Blog",
+    "ourPartners": "Nossos Parceiros",
+    "becomePartner": "Seja um Parceiro"
+  },
+  "copyright": "© 2025 Synolo Biometrics, Inc."
+},
   "challenge": {
     "title": "O Desafio: Captura de Identidade de Recém-nascidos até 8 anos",
     "subtitle": "Por que é tão difícil identificar impressões digitais infantis?",

@@ -23,6 +23,21 @@
     "commercialPartners": "Socios Comerciales",
     "institutionalPartners": "Socios Institucionales"
   },
+  "footer": {
+  "columns": {
+    "useful": "Enlaces Útiles",
+    "community": "Comunidad",
+    "partner": "Socio"
+  },
+  "links": {
+    "about": "Sobre Nosotros",
+    "reader": "Lector de Huellas",
+    "blog": "Blog",
+    "ourPartners": "Nuestros Socios",
+    "becomePartner": "Conviértase en Socio"
+  },
+  "copyright": "© 2025 Synolo Biometrics, Inc."
+},
   "articles": {
   "title": "Artículos",
   "subtitle": "Profundice su comprensión sobre cómo Synolo Neo opera en la recolección de huellas dactilares de recién nacidos.",

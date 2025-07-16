@@ -15,6 +15,21 @@
   "commercialPartners": "Commercial Partners",
   "institutionalPartners": "Institutional Partners"
 },
+"footer": {
+  "columns": {
+    "useful": "Useful Links",
+    "community": "Community",
+    "partner": "Partner"
+  },
+  "links": {
+    "about": "About",
+    "reader": "Fingerprint Reader",
+    "blog": "Blog",
+    "ourPartners": "Our Partners",
+    "becomePartner": "Become a Partner"
+  },
+  "copyright": "© 2025 Synolo Biometrics, Inc."
+},
 
   "hero": {
     "titleLine1": "Total",
