@@ -12,7 +12,7 @@ export function CTASection({ cta }) {
       <p className="mb-8 text-lg">{cta.description}</p>
       <Link
         to="/contact"
-        className="bg-white px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition inline-block"
+        className="bg-white px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition inline-block"
         style={{ color: "#2c3e50" }}
       >
         {cta.buttonText}

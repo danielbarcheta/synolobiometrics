@@ -138,14 +138,14 @@ export default function PressHero() {
         </div>
 
         <motion.div
-          className="hidden lg:flex flex-col w-full lg:w-[45%] h-[80vh] mt-[100px] items-end justify-center"
+          className="flex lg:flex-col w-full lg:w-[45%] h-auto lg:h-[80vh] mt-10 lg:mt-[100px] items-center lg:items-end justify-start lg:justify-center"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <div
             ref={carouselRef}
-            className="flex flex-col justify-center gap-8 w-full max-h-full pr-4 overflow-y-auto custom-scroll"
+            className="flex flex-col justify-center gap-8 w-full pr-4 lg:max-h-full lg:overflow-y-auto custom-scroll"
           >
             {pressData.slice(2).map((item) => (
               <a

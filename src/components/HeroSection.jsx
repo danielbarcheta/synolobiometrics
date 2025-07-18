@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import neohand from "../assets/neohand.png";
 import { useTranslation } from "react-i18next";
-import { MdOutlineCheckCircle } from "react-icons/md"; // Ícone
+import { MdOutlineCheckCircle } from "react-icons/md";
 
 export function HeroSection({ hero }) {
   const { t } = useTranslation();
@@ -59,16 +59,13 @@ export function HeroSection({ hero }) {
           <p className="text-lg sm:text-xl md:text-2xl mt-4 font-semibold text-[#0a2540]">
             {hero.subtitle}
           </p>
-          <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-800 font-medium">
+          <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-800 font-medium max-w-[90%] sm:max-w-none ml-auto">
             {hero.description}
           </p>
-
-          {/* ✅ TEXTO + ÍCONE acima do link */}
           <div className="mt-10 flex items-center justify-end gap-2 text-gray-800 font-semibold text-base md:text-lg">
             <MdOutlineCheckCircle className="text-[#5ce6b1db] text-[1.8rem]" />
             <span>{t("hero.certification")}</span>
           </div>
-
         </motion.div>
       </div>
 
